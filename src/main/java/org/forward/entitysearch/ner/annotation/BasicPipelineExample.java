@@ -27,22 +27,18 @@ public class BasicPipelineExample {
         TokensRegexNERAnnotator regexNerAnnotator = (TokensRegexNERAnnotator)(pipeline.annotators.get(5));
 //        regexNerAnnotator.getAnnotationFields().remove(0);
         regexNerAnnotator.getAnnotationFields().set(0,CustomizableCoreAnnotations.TestRegexNERAnnotation.class);
-        StanfordCoreNLP pipeline2 = new StanfordCoreNLP();
+        AnnotationPipeline pipeline2 = new StanfordCoreNLP();
+        System.out.println(pipeline.annotators.size());
         pipeline2.addAnnotator(pipeline.annotators.get(0));
-        pipeline2.addAnnotator(pipeline.annotators.get(1));
-        pipeline2.addAnnotator(pipeline.annotators.get(2));
-        pipeline2.addAnnotator(pipeline.annotators.get(3));
-        pipeline2.addAnnotator(pipeline.annotators.get(4));
-        pipeline2.addAnnotator(pipeline.annotators.get(5));
-        pipeline = pipeline2;
 
 //        TokensRegexNERAnnotator annotator2 = new TokensRegexNERAnnotator(MAPPING);
+//        pipeline2.addAnnotator(pipeline.annotators.get(1));
 //        pipeline.addAnnotator(annotator2);
 
         // read some text in the text variable
         String text = "Joe Smith was born in California. " +
                 "His email is joe@illinois.edu and his phone number is 2174024647. " +
-                "He was borned in Champaign, Illinois. " +
+                "He was borned in Champaign, Illinois. \n" +
                 "In 2017, he went to Paris, France in the summer. " +
                 "His flight left at 3:00pm on July 10th, 2017. " +
                 "After eating some escargot for the first time, Joe said, \"That was delicious!\" " +
@@ -53,16 +49,28 @@ public class BasicPipelineExample {
         Annotation document = new Annotation(text);
 
         // run all Annotators on this text
-        pipeline.annotate(document);
+        pipeline2.annotate(document);
 
         // these are all the sentences in this document
         // a CoreMap is essentially a Map that uses class objects as keys and has values with custom types
-        List<CoreMap> sentences = document.get(CoreAnnotations.SentencesAnnotation.class);
+        List<CoreMap> sentences2 = document.get(CoreAnnotations.SentencesAnnotation.class);
+        System.out.println(sentences2.size());
 
-        props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, regexner");
-        pipeline = new StanfordCoreNLP(props);
-        pipeline.annotate(new Annotation(sentences));
-        sentences = document.get(CoreAnnotations.SentencesAnnotation.class);
+//        props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, regexner");
+//        pipeline2 = new StanfordCoreNLP(props);
+        pipeline2 = new AnnotationPipeline();
+        pipeline2.addAnnotator(pipeline.annotators.get(0));
+        pipeline2.addAnnotator(pipeline.annotators.get(1));
+        pipeline2.addAnnotator(pipeline.annotators.get(2));
+        pipeline2.addAnnotator(pipeline.annotators.get(3));
+        pipeline2.addAnnotator(pipeline.annotators.get(4));
+        pipeline2.addAnnotator(pipeline.annotators.get(5));
+        Annotation document2 = new Annotation(sentences2);
+        document2 = document;
+        pipeline2.annotate(document2);
+        //pipeline2.annotate(new Annotation(text));
+        List<CoreMap> sentences = document2.get(CoreAnnotations.SentencesAnnotation.class);
+        System.out.println(sentences.size());
 
         System.out.format("%20s %10s %10s %10s\n", "Token", "POS", "NE", "RegexNE");
         System.out.format("%20s %10s %10s %10s\n", "--------------------", "----------", "----------", "----------");
