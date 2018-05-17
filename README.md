@@ -261,6 +261,7 @@ Because multiple NER techniques can be used, there should be a way to determine 
 
 ## Authors
 
+* **Long Pham** - ltpham3@illinois.edu
 * **Alex Aulabaugh** - aaulabaugh@gmail.com
 * **Denghao Ma** - *ner/extraction/huawei_tagging*
 
