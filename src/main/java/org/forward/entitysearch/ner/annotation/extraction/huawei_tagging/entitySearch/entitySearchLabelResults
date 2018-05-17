@@ -1,0 +1,25 @@
+是否能在校园网使用？	<是否能_general&0>	<在校_general&3>	<使用_general&7>
+华为账号可以借给别人吗	<华为_general&0>	<账号_general&2>	<可以_general&4>	<别人_general&8>
+手机已经寄到网点，但是我又不想寄修了，怎么办?	<手机_product&0>	<已经_general&2>	<寄到_general&4>	<网点_general&6>	<但是_general&9>	<不想_general&13>	<寄修_general&15>	<怎么办_general&19>
+荣耀7i全网通支持陀螺仪吗	<荣耀7i_product&0>	<全网通_application&4>	<支持_general&7>	<陀螺仪_general&9>
+删除了同步cloud华为云服务联系人后，并清空了回收站，联系人还可以找回吗	<删除_general&0>	<同步_general&3>	<华为_general&10>	<云服务_application&12>	<联系人_application&15>	<清空_general&21>	<回收站_general&24>	<联系人_application&28>	<可以_general&32>	<找回_application&34>
+预约不成功	<预约_general&0>	<不成功_symptom&2>
+荣耀7i移动版有贴膜吗	<荣耀7i_product&0>	<移动版_general&4>	<贴膜_application&8>
+如何连接蓝牙耳机	<如何_general&0>	<连接_application&2>	<蓝牙耳机_application&4>
+拨打客服电话查询订单详情时提示订单号错误	<拨打_application&0>	<客服_general&2>	<电话_product&4>	<查询_application&6>	<订单_general&8>	<详情_general&10>	<提示_general&13>	<订单号_general&15>	<错误_general&18>
+荣耀畅玩4x移动标准版和高配版有什么区别	<荣耀畅玩4x_product&0>	<移动_general&6>	<标准版_general&8>	<高配版_general&12>	<有什么_general&15>	<区别_general&18>
+g9plus 是否支持虚拟按键	<g9plus_product&0>	<是否_general&7>	<支持_general&9>	<虚拟_general&11>	<按键_application&13>
+预约时网页直接卡死	<预约_general&0>	<网页_general&3>	<直接_general&5>	<卡死_general&7>
+指纹列表明明显示没录过该指纹，新建时提示指纹已存在，清空指纹列表仍提示。	<指纹列表_application&0>	<明明_general&4>	<显示_symptom&6>	<指纹_application&12>	<建_application&16>	<提示_general&18>	<指纹_application&20>	<已存在_symptom&22>	<清空_general&26>	<指纹列表_application&28>	<提示_general&33>
+荣耀7i为什么有些应用在桌面上找不到	<荣耀7i_product&0>	<为什么_general&4>	<有些_general&7>	<应用_general&9>	<桌面_application&12>	<找不到_symptom&15>
+能否转寄，转寄需要另外收费吗	<能否_general&0>	<转寄_general&2>	<转寄_general&5>	<需要_general&7>	<另外_general&9>	<收费_general&11>
+手机充电器有质量问题，我现在没有手机用，可以只把充电器寄到仓库换充电器吗	<手机_product&0>	<充电器_product&2>	<质量问题_symptom&6>	<现在_general&12>	<没有_symptom&14>	<手机_product&16>	<可以_general&20>	<充电器_product&24>	<寄到_general&27>	<仓库_general&29>	<充电器_product&32>
+活动结束后，这款手机还卖不	<活动_general&0>	<结束_general&2>	<这款_general&6>	<手机_product&8>
+荣耀7i电信版的光圈	<荣耀7i_product&0>	<电信版_general&4>	<光圈_application&8>
+发票抬头填写注意事项	<发票抬头_general&0>	<填写_general&4>	<注意事项_general&6>
+荣耀5x全网通版支持杜比音效吗	<荣耀5x_product&0>	<全网通_application&4>	<支持_general&8>	<杜比音效_application&10>
+b315s-936无线功能支持哪些频段？	<b315s-936_product&0>	<无线_application&9>	<功能_application&11>	<支持_general&13>	<哪些_general&15>	<频段_general&17>
+p10外放只从扬声器出来，听筒没有声音	<p10_product&0>	<外放_application&3>	<扬声器_application&7>	<出来_general&10>	<听筒_general&13>	<没有声音_symptom&15>
+荣耀7i电信版支持office吗	<荣耀7i_product&0>	<电信版_general&4>	<支持_general&7>	<office_application&9>
+荣耀v9和荣耀8青春版两款新品什么时候发布	<荣耀v9_product&0>	<荣耀8青春版_product&5>	<新品_general&13>	<什么时候_general&15>	<发布_general&19>
+荣耀小k(k1-g01)_运动计步数据没有或是计步数据为零	<荣耀小k_product&0>	<k1-g01_product&5>	<运动计步_application&13>	<数据_general&17>	<没有_symptom&19>	<或是_general&21>	<步数_general&24>

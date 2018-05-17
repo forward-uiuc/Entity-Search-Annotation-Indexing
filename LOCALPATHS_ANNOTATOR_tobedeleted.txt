@@ -1,0 +1,4 @@
+LOCALDOCS:/Users/longpham/Workspace/2017f-entitylucene/AppleQnA
+OUTPUT:luceneDocs
+CLASSIFIER:/Users/alexaulabaugh/Desktop/ResearchFA17/2017f-entitylucene/NERLuceneDependencies/english.all.3class.distsim.crf.ser.gz
+POSTAGGER:/Users/alexaulabaugh/Desktop/ResearchFA17/2017f-entitylucene/NERLuceneDependencies/english-bidirectional-distsim.tagger

@@ -1,0 +1,16 @@
+FORMATTERSCHEMA:/path/to/project/2017f-entitylucene/NERLucene/src/formatting/PostingsFormat.xml
+
+LOCALDOCS:/path/to/project/2017f-entitylucene/NERLucene/src/indexdir/luceneDocs
+
+//LOCALDOCS:/Path/to/text/docs
+
+//use "lucene if indexing from luceneDocs, "plaintext" otherwise
+LOCALDOCTYPE:lucene
+
+//use "index,luceneDocs" if creating index
+//use "file,luceneDocs" if creating serialized lucene docs
+OUTPUT:index,luceneDocs
+
+CLASSIFIER:/path/to/project/2017f-entitylucene/NERLuceneDependencies/english.all.3class.distsim.crf.ser.gz
+
+POSTAGGER:/path/to/project/ResearchFA17/2017f-entitylucene/NERLuceneDependencies/english-bidirectional-distsim.tagger
