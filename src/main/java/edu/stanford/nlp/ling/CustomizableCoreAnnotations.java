@@ -53,6 +53,16 @@ public class CustomizableCoreAnnotations {
   /**
    * One instance of {@link CustomizableOutputColumnRegexNERAnnotator}
    */
+  public static class TypeAnnotation implements CoreAnnotation<String> {
+    @Override
+    public Class<String> getType() {
+      return String.class;
+    }
+  }
+
+  /**
+   * One instance of {@link CustomizableOutputColumnRegexNERAnnotator}
+   */
   public static class TestRegexNERAnnotation implements CoreAnnotation<String> {
     @Override
     public Class<String> getType() {

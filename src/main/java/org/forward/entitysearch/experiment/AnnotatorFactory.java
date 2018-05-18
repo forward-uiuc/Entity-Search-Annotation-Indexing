@@ -18,6 +18,7 @@ public class AnnotatorFactory {
         regexNerAnnotator.getAnnotationFields().set(0,CustomizableCoreAnnotations.TestRegexNERAnnotation.class);
         // separate tokenizer from other annotators
         tokenizer = (TokenizerAnnotator) providedAnnotators.get(0);
+        pipeline = new AnnotationPipeline();
         pipeline.addAnnotator(providedAnnotators.get(1));
         pipeline.addAnnotator(providedAnnotators.get(2));
         pipeline.addAnnotator(providedAnnotators.get(3));
@@ -41,6 +42,6 @@ public class AnnotatorFactory {
     }
 
     private static AnnotatorFactory instance = null;
-    private TokenizerAnnotator tokenizer = null;
-    private AnnotationPipeline pipeline = null;
+    private TokenizerAnnotator tokenizer;
+    private AnnotationPipeline pipeline;
 }

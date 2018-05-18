@@ -7,6 +7,7 @@ import edu.stanford.nlp.pipeline.Annotation;
 import org.forward.entitysearch.AnnotationProperties;
 import org.forward.entitysearch.experiment.AnnotatorFactory;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -36,14 +37,18 @@ public class HTMLDocumentIngestionManager {
         LIST_OF_TAGS_CREATING_NEW_LINES.add("h4");
         LIST_OF_TAGS_CREATING_NEW_LINES.add("h5");
         LIST_OF_TAGS_CREATING_NEW_LINES.add("h6");
+    }
 
+    private static WebDriver createChromeDriver() {
         System.setProperty("webdriver.chrome.driver",AnnotationProperties.getInstance().getProperty("selenium.chromedriver"));
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless"); // add this if wanting Chrome to be headless.
-        driver = new ChromeDriver(options);
+        WebDriver driver = new ChromeDriver(options);
+        driver.manage().window().setSize(new Dimension(1024,768));
+        return driver;
     }
 
-    private static int travelDOMTreeWithSelenium(RemoteWebElement e, StringBuilder sb) {
+    private static int travelDOMTreeWithSelenium(RemoteWebElement e, StringBuilder sb, WebDriver driver) {
         // String tagName = e.getTagName();
         // System.out.println(tagName);
         int count = 1; // count itself
@@ -59,7 +64,7 @@ public class HTMLDocumentIngestionManager {
             List<Object> children = (List<Object>) ((ChromeDriver) driver).executeScript("return arguments[0].childNodes;", e);
             for (int i = 0; i < children.size(); i++) {
                 if (children.get(i) instanceof RemoteWebElement) {
-                    count += travelDOMTreeWithSelenium((RemoteWebElement) children.get(i), sb);
+                    count += travelDOMTreeWithSelenium((RemoteWebElement) children.get(i), sb, driver);
                 } else {
                     String nodeName = (String) ((ChromeDriver) driver).executeScript("return arguments[0].childNodes[arguments[1]].nodeName;", e, i);
                     if (nodeName.equals("#text")) {
@@ -79,7 +84,7 @@ public class HTMLDocumentIngestionManager {
         return count;
     }
 
-    private static void travelDOMTreeWithSelenium(RemoteWebElement e, Rectangle r, List<CoreLabel> allTokens) {
+    private static void travelDOMTreeWithSelenium(RemoteWebElement e, Rectangle r, List<CoreLabel> allTokens, WebDriver driver) {
         if (e.isDisplayed()) {
             Rectangle rec = null;
             try {
@@ -87,13 +92,23 @@ public class HTMLDocumentIngestionManager {
             } catch (Exception err) {
                 System.err.println("Thee is no layout info in this element: " + e.getTagName());
             }
+            if (rec != null && e.getTagName().equalsIgnoreCase("img")) {
+                CoreLabel t = new CoreLabel();
+                t.set(CustomizableCoreAnnotations.LayoutXAnnotation.class,rec.x);
+                t.set(CustomizableCoreAnnotations.LayoutYAnnotation.class,rec.y);
+                t.set(CustomizableCoreAnnotations.LayoutHeightAnnotation.class,rec.height);
+                t.set(CustomizableCoreAnnotations.LayoutWidthAnnotation.class,rec.width);
+                t.set(CustomizableCoreAnnotations.TypeAnnotation.class, "img");
+                t.set(CoreAnnotations.TextAnnotation.class,"");
+                allTokens.add(t);
+            }
             if (rec == null) {
                 rec = r;
             }
             List<Object> children = (List<Object>) ((ChromeDriver) driver).executeScript("return arguments[0].childNodes;", e);
             for (int i = 0; i < children.size(); i++) {
                 if (children.get(i) instanceof RemoteWebElement) {
-                    travelDOMTreeWithSelenium((RemoteWebElement) children.get(i), rec, allTokens);
+                    travelDOMTreeWithSelenium((RemoteWebElement) children.get(i), rec, allTokens, driver);
                 } else {
                     String nodeName = (String) ((ChromeDriver) driver).executeScript("return arguments[0].childNodes[arguments[1]].nodeName;", e, i);
                     if (nodeName.equals("#text")) {
@@ -117,7 +132,7 @@ public class HTMLDocumentIngestionManager {
         // put it out side of the if above because
         // although <br/> is not displayed, we still add new line when seeing it
         if (LIST_OF_TAGS_CREATING_NEW_LINES.contains(e.getTagName())
-                && allTokens.get(allTokens.size()-1).get(CoreAnnotations.TextAnnotation.class).matches("\\p{Punct}")){
+                && allTokens.size() > 0 && !allTokens.get(allTokens.size()-1).get(CoreAnnotations.TextAnnotation.class).matches("\\p{Punct}")){
             List<CoreLabel> tokens = tokenizeText(".");
             allTokens.addAll(tokens);
         }
@@ -132,13 +147,12 @@ public class HTMLDocumentIngestionManager {
     public static void main(String[] args) {
 
         String baseUrl = "http://www.forwarddatalab.org/kevinchang";
-
-        // launch browser and direct it to the Base URL
-        driver.get(baseUrl);
-
-        // get the title and print it
-        String pageTitle = driver.getTitle();
-        System.out.println(pageTitle);
+        WebDriver driver = createChromeDriver();
+        ESAnnotatedHTMLDocument document = annotateHTMLDocument(baseUrl, driver);
+        printAnnotatedDocument(document);
+        document = annotateHTMLDocument("https://cs.illinois.edu/directory/profile/kcchang", driver);
+        printAnnotatedDocument(document);
+        driver.close();
 
         // List<WebElement> el = driver.findElements(By.cssSelector("*"));
         // It is not working because it will miss text nodes
@@ -153,30 +167,6 @@ public class HTMLDocumentIngestionManager {
 //        String out = getAllTextWithLayout();
 
 //        System.out.println(out);
-
-        List<CoreLabel> allTokens = new ArrayList<>();
-        travelDOMTreeWithSelenium((RemoteWebElement)driver.findElement(By.xpath("/html/body")),null,allTokens);
-        Annotation document = new Annotation("");
-        document.set(CoreAnnotations.TokensAnnotation.class,allTokens);
-        AnnotatorFactory.getInstance().getAnnotationPipeline().annotate(document);
-
-        System.out.format("%20s %10s %10s %10s\n", "Token", "POS", "NE", "RegexNE");
-        System.out.format("%20s %10s %10s %10s\n", "--------------------", "----------", "----------", "----------");
-
-        for (CoreLabel token: document.get(CoreAnnotations.TokensAnnotation.class)) {
-            // this is the text of the token
-            String word = token.get(CoreAnnotations.TextAnnotation.class);
-            // this is the POS tag of the token
-            String pos = token.get(CoreAnnotations.PartOfSpeechAnnotation.class);
-            // this is the NER label of the token
-            String ne = token.get(CoreAnnotations.NamedEntityTagAnnotation.class);
-            // this is the custom label of the token from ner annotator
-            String tmp = token.get(CustomizableCoreAnnotations.TestRegexNERAnnotation.class);
-            // this is the custom label of the token from the custom annotator
-            int x = token.get(CustomizableCoreAnnotations.LayoutXAnnotation.class);
-
-            System.out.format("%20s %10s %10s %10s %d\n", word, pos, ne, tmp, x);
-        }
 
 //        The method below won't work because it will miss the text nodes
 //        StringBuilder sb = new StringBuilder();
@@ -210,15 +200,52 @@ public class HTMLDocumentIngestionManager {
 //        System.out.println("Done");
 //        System.out.println(sb.toString());
 
-        //close browser
-        driver.close();
     }
 
-    private static String getAllTextWithLayout() {
+    private static ESAnnotatedHTMLDocument annotateHTMLDocument(String url, WebDriver driver) {
+        driver.get(url);
+        String pageTitle = driver.getTitle();
+        System.out.println(url + " " + pageTitle);
+        List<CoreLabel> allTokens = new ArrayList<>();
+        travelDOMTreeWithSelenium((RemoteWebElement)driver.findElement(By.xpath("/html/body")),null,allTokens, driver);
+        ESAnnotatedHTMLDocument document = new ESAnnotatedHTMLDocument(allTokens);
+        AnnotatorFactory.getInstance().getAnnotationPipeline().annotate(document);
+        return document;
+    }
+
+    private static void printAnnotatedDocument(ESAnnotatedHTMLDocument document) {
+        System.out.format("%30s %15s %15s %15s %15s %15s %15s %15s \n", "Token", "POS", "NE", "RegexNE", "x", "y", "height", "width");
+        String sep = "---------------";
+        System.out.format("%30s %15s %15s %15s %15s %15s %15s %15s\n", sep + sep, sep, sep, sep, sep, sep, sep, sep);
+
+        for (CoreLabel token: document.get(CoreAnnotations.TokensAnnotation.class)) {
+            // this is the text of the token
+            String word = token.get(CoreAnnotations.TextAnnotation.class);
+            if (token.containsKey(CustomizableCoreAnnotations.TypeAnnotation.class)) {
+                word = token.get(CustomizableCoreAnnotations.TypeAnnotation.class);
+            }
+            // this is the POS tag of the token
+            String pos = token.get(CoreAnnotations.PartOfSpeechAnnotation.class);
+            // this is the NER label of the token
+            String ne = token.get(CoreAnnotations.NamedEntityTagAnnotation.class);
+            // this is the custom label of the token from ner annotator
+            String tmp = token.get(CustomizableCoreAnnotations.TestRegexNERAnnotation.class);
+            // these are the custom labels of the token for layout info
+            Integer x = token.get(CustomizableCoreAnnotations.LayoutXAnnotation.class);
+            Integer y = token.get(CustomizableCoreAnnotations.LayoutYAnnotation.class);
+            Integer height = token.get(CustomizableCoreAnnotations.LayoutHeightAnnotation.class);
+            Integer width = token.get(CustomizableCoreAnnotations.LayoutWidthAnnotation.class);
+
+            System.out.format("%30s %15s %15s %15s %15d %15d %15d %15d\n", word, pos, ne, tmp, x, y, height, width);
+        }
+    }
+
+    public static String getAllTextWithLayout(WebDriver driver, String url) {
+        driver.get(url);
+        String pageTitle = driver.getTitle();
+        System.out.println(pageTitle);
         StringBuilder sb2 = new StringBuilder();
-        travelDOMTreeWithSelenium((RemoteWebElement)driver.findElement(By.xpath("/html/body")), sb2);
+        travelDOMTreeWithSelenium((RemoteWebElement)driver.findElement(By.xpath("/html/body")), sb2, driver);
         return sb2.toString().replaceAll("\n\n+", "\n");
     }
-
-    private static WebDriver driver;
 }
