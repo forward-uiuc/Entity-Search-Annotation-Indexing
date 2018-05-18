@@ -1,4 +1,4 @@
-package org.forward.entitysearch.ner.annotation;
+package org.forward.entitysearch.experiment;
 
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
@@ -27,9 +27,6 @@ public class BasicPipelineExample {
         TokensRegexNERAnnotator regexNerAnnotator = (TokensRegexNERAnnotator)(pipeline.annotators.get(5));
 //        regexNerAnnotator.getAnnotationFields().remove(0);
         regexNerAnnotator.getAnnotationFields().set(0,CustomizableCoreAnnotations.TestRegexNERAnnotation.class);
-        AnnotationPipeline pipeline2 = new StanfordCoreNLP();
-        System.out.println(pipeline.annotators.size());
-        pipeline2.addAnnotator(pipeline.annotators.get(0));
 
 //        TokensRegexNERAnnotator annotator2 = new TokensRegexNERAnnotator(MAPPING);
 //        pipeline2.addAnnotator(pipeline.annotators.get(1));
@@ -47,6 +44,47 @@ public class BasicPipelineExample {
 
         // create an empty Annotation just with the given text
         Annotation document = new Annotation(text);
+        pipeline.annotate(document);
+        System.out.format("%20s %10s %10s %10s\n", "Token", "POS", "NE", "RegexNE");
+        System.out.format("%20s %10s %10s %10s\n", "--------------------", "----------", "----------", "----------");
+
+        for (CoreLabel token: document.get(CoreAnnotations.TokensAnnotation.class)) {
+            // this is the text of the token
+            String word = token.get(CoreAnnotations.TextAnnotation.class);
+            // this is the POS tag of the token
+            String pos = token.get(CoreAnnotations.PartOfSpeechAnnotation.class);
+            // this is the NER label of the token
+            String ne = token.get(CoreAnnotations.NamedEntityTagAnnotation.class);
+            // this is the custom label of the token from ner annotator
+            String tmp = token.get(CustomizableCoreAnnotations.TestRegexNERAnnotation.class);
+            // this is the custom label of the token from the custom annotator
+
+            System.out.format("%20s %10s %10s %10s\n", word, pos, ne, tmp);
+        }
+
+        for(CoreMap sentence: document.get(CoreAnnotations.SentencesAnnotation.class)) {
+            // traversing the words in the current sentence
+            // a CoreLabel is a CoreMap with additional token-specific methods
+            for (CoreLabel token: sentence.get(CoreAnnotations.TokensAnnotation.class)) {
+                // this is the text of the token
+                String word = token.get(CoreAnnotations.TextAnnotation.class);
+                // this is the POS tag of the token
+                String pos = token.get(CoreAnnotations.PartOfSpeechAnnotation.class);
+                // this is the NER label of the token
+                String ne = token.get(CoreAnnotations.NamedEntityTagAnnotation.class);
+                // this is the custom label of the token from ner annotator
+                String tmp = token.get(CustomizableCoreAnnotations.TestRegexNERAnnotation.class);
+                // this is the custom label of the token from the custom annotator
+
+                System.out.format("%20s %10s %10s %10s\n", word, pos, ne, tmp);
+            }
+            System.out.println("\n");
+        }
+        System.exit(0);
+
+        AnnotationPipeline pipeline2 = new StanfordCoreNLP();
+        System.out.println(pipeline.annotators.size());
+        pipeline2.addAnnotator(pipeline.annotators.get(0));
 
         // run all Annotators on this text
         pipeline2.annotate(document);

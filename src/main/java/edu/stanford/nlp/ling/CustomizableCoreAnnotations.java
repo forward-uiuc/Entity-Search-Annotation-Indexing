@@ -60,4 +60,44 @@ public class CustomizableCoreAnnotations {
     }
   }
 
+  /**
+   * One instance of {@link CustomizableOutputColumnRegexNERAnnotator}
+   */
+  public static class LayoutXAnnotation implements CoreAnnotation<Integer> {
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+  }
+
+  /**
+   * One instance of {@link CustomizableOutputColumnRegexNERAnnotator}
+   */
+  public static class LayoutYAnnotation implements CoreAnnotation<Integer> {
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+  }
+
+  /**
+   * One instance of {@link CustomizableOutputColumnRegexNERAnnotator}
+   */
+  public static class LayoutHeightAnnotation implements CoreAnnotation<Integer> {
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+  }
+
+  /**
+   * One instance of {@link CustomizableOutputColumnRegexNERAnnotator}
+   */
+  public static class LayoutWidthAnnotation implements CoreAnnotation<Integer> {
+    @Override
+    public Class<Integer> getType() {
+      return Integer.class;
+    }
+  }
+
 }

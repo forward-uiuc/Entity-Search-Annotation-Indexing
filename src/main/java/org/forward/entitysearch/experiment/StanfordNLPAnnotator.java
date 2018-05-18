@@ -1,4 +1,4 @@
-package org.forward.entitysearch.ner.annotation;
+package org.forward.entitysearch.experiment;
 
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
