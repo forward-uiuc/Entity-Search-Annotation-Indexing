@@ -3,7 +3,7 @@ package org.forward.entitysearch.experiment;
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.Annotation;
-import edu.stanford.nlp.pipeline.CustomizableOutputColumnRegexNERAnnotator;
+import edu.stanford.nlp.pipeline.CustomizableFieldRegexNERAnnotator;
 import edu.stanford.nlp.process.CoreLabelTokenFactory;
 import edu.stanford.nlp.process.PTBTokenizer;
 import edu.stanford.nlp.process.Tokenizer;
@@ -19,10 +19,10 @@ public class StanfordNLPAnnotator {
 
     // private static final String MAPPING = "/u/nlp/data/TAC-KBP2010/sentence_extraction/itest_map";
     private static final String MAPPING = "edu/stanford/nlp/models/regexner/type_map_clean";
-    private static CustomizableOutputColumnRegexNERAnnotator annotator;
+    private static CustomizableFieldRegexNERAnnotator annotator;
 
     public static void main(String[] args) {
-        annotator = new CustomizableOutputColumnRegexNERAnnotator(MAPPING, false, null);
+        annotator = new CustomizableFieldRegexNERAnnotator(MAPPING, false, null);
         String str = "President Barack Obama lives in Chicago , Illinois , "
                 + "and is a practicing Christian .";
         TokenizerFactory<CoreLabel> tokenizerFactory =

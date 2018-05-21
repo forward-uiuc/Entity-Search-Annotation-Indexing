@@ -1,6 +1,6 @@
 package edu.stanford.nlp.ling;
 
-import edu.stanford.nlp.pipeline.CustomizableOutputColumnRegexNERAnnotator;
+import edu.stanford.nlp.pipeline.CustomizableFieldRegexNERAnnotator;
 import edu.stanford.nlp.util.*;
 
 /**
@@ -38,76 +38,87 @@ import edu.stanford.nlp.util.*;
  */
 public class CustomizableCoreAnnotations {
 
-  private CustomizableCoreAnnotations() { } // only static members
+    private CustomizableCoreAnnotations() {
+    } // only static members
 
-  /**
-   * The CoreMap key for customizable {@link CustomizableOutputColumnRegexNERAnnotator}
-   */
-  public static class RegexNERAnnotation implements CoreAnnotation<String> {
-    @Override
-    public Class<String> getType() {
-      return String.class;
+    /**
+     * One instance of {@link CustomizableFieldRegexNERAnnotator}
+     */
+    public static class RegexNERAnnotation implements CoreAnnotation<String> {
+        @Override
+        public Class<String> getType() {
+            return String.class;
+        }
     }
-  }
 
-  /**
-   * One instance of {@link CustomizableOutputColumnRegexNERAnnotator}
-   */
-  public static class TypeAnnotation implements CoreAnnotation<String> {
-    @Override
-    public Class<String> getType() {
-      return String.class;
+    /**
+     * One instance of {@link CustomizableFieldRegexNERAnnotator}
+     */
+    public static class TypeAnnotation implements CoreAnnotation<String> {
+        @Override
+        public Class<String> getType() {
+            return String.class;
+        }
     }
-  }
 
-  /**
-   * One instance of {@link CustomizableOutputColumnRegexNERAnnotator}
-   */
-  public static class TestRegexNERAnnotation implements CoreAnnotation<String> {
-    @Override
-    public Class<String> getType() {
-      return String.class;
+    /**
+     * One instance of {@link CustomizableFieldRegexNERAnnotator}
+     */
+    public static class LayoutXAnnotation implements CoreAnnotation<Integer> {
+        @Override
+        public Class<Integer> getType() {
+            return Integer.class;
+        }
     }
-  }
 
-  /**
-   * One instance of {@link CustomizableOutputColumnRegexNERAnnotator}
-   */
-  public static class LayoutXAnnotation implements CoreAnnotation<Integer> {
-    @Override
-    public Class<Integer> getType() {
-      return Integer.class;
+    /**
+     * One instance of {@link CustomizableFieldRegexNERAnnotator}
+     */
+    public static class LayoutYAnnotation implements CoreAnnotation<Integer> {
+        @Override
+        public Class<Integer> getType() {
+            return Integer.class;
+        }
     }
-  }
 
-  /**
-   * One instance of {@link CustomizableOutputColumnRegexNERAnnotator}
-   */
-  public static class LayoutYAnnotation implements CoreAnnotation<Integer> {
-    @Override
-    public Class<Integer> getType() {
-      return Integer.class;
+    /**
+     * One instance of {@link CustomizableFieldRegexNERAnnotator}
+     */
+    public static class LayoutHeightAnnotation implements CoreAnnotation<Integer> {
+        @Override
+        public Class<Integer> getType() {
+            return Integer.class;
+        }
     }
-  }
 
-  /**
-   * One instance of {@link CustomizableOutputColumnRegexNERAnnotator}
-   */
-  public static class LayoutHeightAnnotation implements CoreAnnotation<Integer> {
-    @Override
-    public Class<Integer> getType() {
-      return Integer.class;
+    /**
+     * One instance of {@link CustomizableFieldRegexNERAnnotator}
+     */
+    public static class LayoutWidthAnnotation implements CoreAnnotation<Integer> {
+        @Override
+        public Class<Integer> getType() {
+            return Integer.class;
+        }
     }
-  }
 
-  /**
-   * One instance of {@link CustomizableOutputColumnRegexNERAnnotator}
-   */
-  public static class LayoutWidthAnnotation implements CoreAnnotation<Integer> {
-    @Override
-    public Class<Integer> getType() {
-      return Integer.class;
+    /**
+     * One instance of {@link CustomizableFieldRegexNERAnnotator}
+     */
+    public static class ConferenceTagAnnotation implements CoreAnnotation<String> {
+        @Override
+        public Class<String> getType() {
+            return String.class;
+        }
     }
-  }
+
+    /**
+     * One instance of {@link CustomizableFieldRegexNERAnnotator}
+     */
+    public static class ConferenceAcronymTagAnnotation implements CoreAnnotation<String> {
+        @Override
+        public Class<String> getType() {
+            return String.class;
+        }
+    }
 
 }

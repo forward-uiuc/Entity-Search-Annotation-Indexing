@@ -15,10 +15,11 @@ public class AnnotatorFactory {
         List<Annotator> providedAnnotators = providedPipeline.annotators;
         // separate label between ner and regexner
         TokensRegexNERAnnotator regexNerAnnotator = (TokensRegexNERAnnotator)(providedAnnotators.get(5));
-        regexNerAnnotator.getAnnotationFields().set(0,CustomizableCoreAnnotations.TestRegexNERAnnotation.class);
+        regexNerAnnotator.getAnnotationFields().set(0,CustomizableCoreAnnotations.RegexNERAnnotation.class);
         // separate tokenizer from other annotators
         tokenizer = (TokenizerAnnotator) providedAnnotators.get(0);
         pipeline = new AnnotationPipeline();
+        //Can't use StanfordNLPAnnotator because it automatically adds pre-requisite annotators
         pipeline.addAnnotator(providedAnnotators.get(1));
         pipeline.addAnnotator(providedAnnotators.get(2));
         pipeline.addAnnotator(providedAnnotators.get(3));

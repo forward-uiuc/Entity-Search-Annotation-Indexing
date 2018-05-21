@@ -389,7 +389,7 @@ public class TokensRegexNERAnnotator implements Annotator  {
       if (commonWords.contains(str)) {
         if (verbose) {
           log.info("Not annotating (common word) '" + str + "': " +
-              StringUtils.joinFields(m.groupNodes(g), CustomizableCoreAnnotations.TestRegexNERAnnotation.class)
+              StringUtils.joinFields(m.groupNodes(g), CustomizableCoreAnnotations.RegexNERAnnotation.class)
               + " with " + entry.getTypeDescription() + ", sentence is '" + StringUtils.joinWords(tokens, " ") + "'");
         }
         continue;
@@ -405,12 +405,12 @@ public class TokensRegexNERAnnotator implements Annotator  {
           for (int j = 0; j < annotationFields.size(); j++) {
             token.set(annotationFields.get(j), entry.types[j]);
           }
-         // tokens.get(i).set(CustomizableCoreAnnotations.TestRegexNERAnnotation.class, entry.type);
+         // tokens.get(i).set(CustomizableCoreAnnotations.RegexNERAnnotation.class, entry.type);
         }
       } else {
         if (verbose) {
           log.info("Not annotating  '" + m.group(g) + "': " +
-                  StringUtils.joinFields(m.groupNodes(g), CustomizableCoreAnnotations.TestRegexNERAnnotation.class)
+                  StringUtils.joinFields(m.groupNodes(g), CustomizableCoreAnnotations.RegexNERAnnotation.class)
                   + " with " + entry.getTypeDescription() + ", sentence is '" + StringUtils.joinWords(tokens, " ") + "'");
         }
       }

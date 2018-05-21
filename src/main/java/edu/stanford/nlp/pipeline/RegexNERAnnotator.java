@@ -80,15 +80,15 @@ public class RegexNERAnnotator implements Annotator  {
       classifier.classify(tokens);
 
       for (CoreLabel token : tokens) {
-        if (token.get(CustomizableCoreAnnotations.TestRegexNERAnnotation.class) == null)
-          token.set(CustomizableCoreAnnotations.TestRegexNERAnnotation.class, classifier.flags.backgroundSymbol);
+        if (token.get(CustomizableCoreAnnotations.RegexNERAnnotation.class) == null)
+          token.set(CustomizableCoreAnnotations.RegexNERAnnotation.class, classifier.flags.backgroundSymbol);
       }
 
       for (int start = 0; start < tokens.size(); start++) {
         CoreLabel token = tokens.get(start);
         String answerType = token.get(CoreAnnotations.AnswerAnnotation.class);
         if (answerType == null) continue;
-        String NERType = token.get(CustomizableCoreAnnotations.TestRegexNERAnnotation.class);
+        String NERType = token.get(CustomizableCoreAnnotations.RegexNERAnnotation.class);
 
         int answerEnd = findEndOfAnswerAnnotation(tokens, start);
         int NERStart = findStartOfNERAnnotation(tokens, start);
@@ -101,7 +101,7 @@ public class RegexNERAnnotator implements Annotator  {
 
           // annotate each token in the span
           for (int i = start; i < answerEnd; i ++)
-            tokens.get(i).set(CustomizableCoreAnnotations.TestRegexNERAnnotation.class, answerType);
+            tokens.get(i).set(CustomizableCoreAnnotations.RegexNERAnnotation.class, answerType);
         }
         start = answerEnd - 1;
       }
@@ -119,15 +119,15 @@ public class RegexNERAnnotator implements Annotator  {
   }
 
   private static int findStartOfNERAnnotation(List<CoreLabel> tokens, int start) {
-    String type = tokens.get(start).get(CustomizableCoreAnnotations.TestRegexNERAnnotation.class);
-    while (start >= 0 && type.equals(tokens.get(start).get(CustomizableCoreAnnotations.TestRegexNERAnnotation.class)))
+    String type = tokens.get(start).get(CustomizableCoreAnnotations.RegexNERAnnotation.class);
+    while (start >= 0 && type.equals(tokens.get(start).get(CustomizableCoreAnnotations.RegexNERAnnotation.class)))
       start--;
     return start + 1;
   }
 
   private static int findEndOfNERAnnotation(List<CoreLabel> tokens, int start) {
-    String type = tokens.get(start).get(CustomizableCoreAnnotations.TestRegexNERAnnotation.class);
-    while (start < tokens.size() && type.equals(tokens.get(start).get(CustomizableCoreAnnotations.TestRegexNERAnnotation.class)))
+    String type = tokens.get(start).get(CustomizableCoreAnnotations.RegexNERAnnotation.class);
+    while (start < tokens.size() && type.equals(tokens.get(start).get(CustomizableCoreAnnotations.RegexNERAnnotation.class)))
       start++;
     return start;
   }

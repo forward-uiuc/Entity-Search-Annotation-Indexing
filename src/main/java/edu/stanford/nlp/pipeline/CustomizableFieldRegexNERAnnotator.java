@@ -24,10 +24,10 @@ import edu.stanford.nlp.util.CoreMap;
  *
  * @author jtibs, longpt214
  */
-public class CustomizableOutputColumnRegexNERAnnotator implements Annotator {
+public class CustomizableFieldRegexNERAnnotator implements Annotator {
 
   /** A logger for this class */
-  private static Redwood.RedwoodChannels log = Redwood.channels(CustomizableOutputColumnRegexNERAnnotator.class);
+  private static Redwood.RedwoodChannels log = Redwood.channels(CustomizableFieldRegexNERAnnotator.class);
 
   private final RegexNERSequenceClassifier classifier;
   private final boolean verbose;
@@ -41,7 +41,7 @@ public class CustomizableOutputColumnRegexNERAnnotator implements Annotator {
 //          new PropertiesUtils.Property("verbose", "false", ""),
 //  };
 
-//  public CustomizableOutputColumnRegexNERAnnotator(String name, Properties properties) {
+//  public CustomizableFieldRegexNERAnnotator(String name, Properties properties) {
 //    String mapping = properties.getProperty(name + ".mapping", DefaultPaths.DEFAULT_REGEXNER_RULES);
 //    boolean ignoreCase = Boolean.parseBoolean(properties.getProperty(name + ".ignorecase", "false"));
 //    String validPosPattern = properties.getProperty(name + ".validpospattern", RegexNERSequenceClassifier.DEFAULT_VALID_POS);
@@ -52,19 +52,23 @@ public class CustomizableOutputColumnRegexNERAnnotator implements Annotator {
 //    this.verbose = verbose;
 //  }
 
-  public CustomizableOutputColumnRegexNERAnnotator(String mapping, Class<? extends TypesafeMap.Key<String>> typeParameterClass) {
+  public CustomizableFieldRegexNERAnnotator(String mapping, Class<? extends TypesafeMap.Key<String>> typeParameterClass) {
     this(mapping, false, typeParameterClass);
   }
 
-  public CustomizableOutputColumnRegexNERAnnotator(String mapping, boolean ignoreCase, Class<? extends TypesafeMap.Key<String>> typeParameterClass) {
+  public CustomizableFieldRegexNERAnnotator(String mapping, boolean ignoreCase, Class<? extends TypesafeMap.Key<String>> typeParameterClass) {
     this(mapping, ignoreCase, RegexNERSequenceClassifier.DEFAULT_VALID_POS, typeParameterClass);
   }
 
-  public CustomizableOutputColumnRegexNERAnnotator(String mapping, boolean ignoreCase, String validPosPattern, Class<? extends TypesafeMap.Key<String>> typeParameterClass) {
+  public CustomizableFieldRegexNERAnnotator(String mapping, boolean ignoreCase, boolean verbose, Class<? extends TypesafeMap.Key<String>> typeParameterClass) {
+        this(mapping, ignoreCase, false, RegexNERSequenceClassifier.DEFAULT_VALID_POS, verbose, typeParameterClass);
+  }
+
+  public CustomizableFieldRegexNERAnnotator(String mapping, boolean ignoreCase, String validPosPattern, Class<? extends TypesafeMap.Key<String>> typeParameterClass) {
     this(mapping, ignoreCase, true, validPosPattern, false, typeParameterClass);
   }
 
-  public CustomizableOutputColumnRegexNERAnnotator(String mapping, boolean ignoreCase, boolean overwriteMyLabels, String validPosPattern, boolean verbose, Class<? extends TypesafeMap.Key<String>> typeParameterClass) {
+  public CustomizableFieldRegexNERAnnotator(String mapping, boolean ignoreCase, boolean overwriteMyLabels, String validPosPattern, boolean verbose, Class<? extends TypesafeMap.Key<String>> typeParameterClass) {
     classifier = new RegexNERSequenceClassifier(mapping, ignoreCase, overwriteMyLabels, validPosPattern);
     this.verbose = verbose;
     this.outputClass = typeParameterClass;
@@ -84,6 +88,11 @@ public class CustomizableOutputColumnRegexNERAnnotator implements Annotator {
     List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class);
     for (CoreMap sentence : sentences) {
       List<CoreLabel> tokens = sentence.get(CoreAnnotations.TokensAnnotation.class);
+      //Long's addition
+        for (CoreLabel token : tokens) {
+            token.set(CoreAnnotations.AnswerAnnotation.class, null);
+        }
+      //End Long's addition
       classifier.classify(tokens);
 
       for (CoreLabel token : tokens) {
@@ -102,6 +111,8 @@ public class CustomizableOutputColumnRegexNERAnnotator implements Annotator {
         int NERStart = findStartOfNERAnnotation(tokens, start);
         int NEREnd = findEndOfNERAnnotation(tokens, start);
 
+//        System.out.println(token.get(CoreAnnotations.TextAnnotation.class));
+//        System.out.println(tokens.size());
         // check that the spans are the same, specially handling the case of
         // tokens with background named entity tags ("other")
         if ((NERStart == start || NERType.equals(classifier.flags.backgroundSymbol)) &&
@@ -119,7 +130,7 @@ public class CustomizableOutputColumnRegexNERAnnotator implements Annotator {
       log.info("done.");
   }
 
-  private static int findEndOfAnswerAnnotation(List<CoreLabel> tokens, int start) {
+  private int findEndOfAnswerAnnotation(List<CoreLabel> tokens, int start) {
     String type = tokens.get(start).get(CoreAnnotations.AnswerAnnotation.class);
     while (start < tokens.size() && type.equals(tokens.get(start).get(CoreAnnotations.AnswerAnnotation.class)))
       start++;

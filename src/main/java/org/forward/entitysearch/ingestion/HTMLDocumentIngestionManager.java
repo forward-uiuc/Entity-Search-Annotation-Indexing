@@ -229,7 +229,7 @@ public class HTMLDocumentIngestionManager {
             // this is the NER label of the token
             String ne = token.get(CoreAnnotations.NamedEntityTagAnnotation.class);
             // this is the custom label of the token from ner annotator
-            String tmp = token.get(CustomizableCoreAnnotations.TestRegexNERAnnotation.class);
+            String tmp = token.get(CustomizableCoreAnnotations.RegexNERAnnotation.class);
             // these are the custom labels of the token for layout info
             Integer x = token.get(CustomizableCoreAnnotations.LayoutXAnnotation.class);
             Integer y = token.get(CustomizableCoreAnnotations.LayoutYAnnotation.class);
