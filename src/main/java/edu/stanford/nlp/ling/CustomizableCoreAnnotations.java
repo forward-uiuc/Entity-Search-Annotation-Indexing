@@ -121,4 +121,63 @@ public class CustomizableCoreAnnotations {
         }
     }
 
+    /**
+     * One instance of {@link CustomizableFieldRegexNERAnnotator}
+     */
+    public static class RegexTagAnnotation implements CoreAnnotation<String> {
+        @Override
+        public Class<String> getType() {
+            return String.class;
+        }
+    }
+
+    /**
+     * One instance of {@link CustomizableFieldRegexNERAnnotator}
+     */
+    public static class CourseTagAnnotation implements CoreAnnotation<String> {
+        @Override
+        public Class<String> getType() {
+            return String.class;
+        }
+    }
+
+    /**
+     * One instance of {@link CustomizableFieldRegexNERAnnotator}
+     */
+    public static class JournalTagAnnotation implements CoreAnnotation<String> {
+        @Override
+        public Class<String> getType() {
+            return String.class;
+        }
+    }
+
+    /**
+     * One instance of {@link CustomizableFieldRegexNERAnnotator}
+     */
+    public static class TopicTagAnnotation implements CoreAnnotation<String> {
+        @Override
+        public Class<String> getType() {
+            return String.class;
+        }
+    }
+
+    /**
+     * One instance of {@link CustomizableFieldRegexNERAnnotator}
+     */
+    public static class ProfessorTagAnnotation implements CoreAnnotation<String> {
+        @Override
+        public Class<String> getType() {
+            return String.class;
+        }
+    }
+
+    /**
+     * One instance of {@link CustomizableFieldRegexNERAnnotator}
+     */
+    public static class SponsorAgencyTagAnnotation implements CoreAnnotation<String> {
+        @Override
+        public Class<String> getType() {
+            return String.class;
+        }
+    }
 }

@@ -2,36 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbbbc773-7714-4942-be21-383885d0c5dc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/PipelineHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapping_files/conference_acronym_list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mapping_files/conference_acronym_list.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapping_files/conference_list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mapping_files/conference_list.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapping_files/date_list.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapping_files/email_list.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapping_files/filtered-file-extensions-list.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapping_files/money_list.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapping_files/number_list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapping_files/conference_acronym_list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapping_files/conference_list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapping_files/course_list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapping_files/course_number_list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapping_files/journal_list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapping_files/phone_list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapping_files/professor_list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapping_files/sponsor_agency_list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapping_files/test_regex.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mapping_files/test_regex.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapping_files/topic_list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapping_files/year_list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapping_files/zipcode_list.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/CustomizableCoreAnnotations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/CustomizableCoreAnnotations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/CustomizableOutputColumnRegexNERAnnotator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/RegexNERAnnotator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/RegexNERAnnotator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/TokensRegexNERAnnotator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/TokensRegexNERAnnotator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/AnnotatorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/AnnotatorFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/TestRegexNERAnnotation.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/BasicPipelineExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/BasicPipelineExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/StanfordNLPAnnotator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/StanfordNLPAnnotator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations$LayoutHeightAnnotation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations$LayoutHeightAnnotation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations$LayoutWidthAnnotation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations$LayoutWidthAnnotation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations$LayoutXAnnotation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations$LayoutXAnnotation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations$LayoutYAnnotation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations$LayoutYAnnotation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations$RegexNERAnnotation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations$RegexNERAnnotation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations$TestRegexNERAnnotation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations$TypeAnnotation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations$TypeAnnotation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/pipeline/RegexNERAnnotator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/pipeline/RegexNERAnnotator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/pipeline/TokensRegexNERAnnotator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/pipeline/TokensRegexNERAnnotator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/experiment/AnnotatorFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/experiment/AnnotatorFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/experiment/BasicPipelineExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/experiment/BasicPipelineExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BasicPipelineExample.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BasicPipelineExample.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/BasicPipelineExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="70" selection-end-column="11" />
+            <state relative-caret-position="-209">
+              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomizableFieldRegexNERAnnotator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/CustomizableFieldRegexNERAnnotator.java">
+      <file leaf-file-name="StanfordNLPAnnotator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/StanfordNLPAnnotator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+            <state relative-caret-position="161">
+              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,56 +62,78 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegexNERSequenceClassifier.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar!/edu/stanford/nlp/ie/regexp/RegexNERSequenceClassifier.java">
+      <file leaf-file-name="HTMLDocumentIngestionManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="335" column="14" lean-forward="true" selection-start-line="335" selection-start-column="14" selection-end-line="335" selection-end-column="43" />
+            <state relative-caret-position="-1858">
+              <caret line="74" column="21" lean-forward="true" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArrayCoreMap.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar!/edu/stanford/nlp/util/ArrayCoreMap.java">
+      <file leaf-file-name="AnnotatorFactory.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/AnnotatorFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="115" selection-start-line="115" selection-end-line="115" />
+            <state relative-caret-position="190">
+              <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestSelenium.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1020">
+              <caret line="15" column="131" selection-start-line="15" selection-start-column="131" selection-end-line="15" selection-end-column="131" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestRegex.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestRegex.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="53" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="StanfordCoreNLP.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar!/edu/stanford/nlp/pipeline/StanfordCoreNLP.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/StanfordCoreNLP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1170">
-              <caret line="86" column="13" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
+            <state relative-caret-position="392">
+              <caret line="446" selection-start-line="446" selection-end-line="446" />
+              <folding>
+                <element signature="e#0#57379#0" expanded="true" />
+                <element signature="e#5497#5498#0" expanded="true" />
+                <element signature="e#5545#5546#0" expanded="true" />
+                <element signature="e#7336#7337#0" expanded="true" />
+                <element signature="e#7383#7384#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="org:city_of_headquarters.rules" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-models.jar!/edu/stanford/nlp/models/kbp/tokensregex/org:city_of_headquarters.rules">
+      <file leaf-file-name="annotation_config.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/annotation_config.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="69" column="26" lean-forward="true" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
+            <state relative-caret-position="437">
+              <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="regexner_cased.tab" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-models.jar!/edu/stanford/nlp/models/kbp/regexner_cased.tab">
+      <file leaf-file-name="PipelineHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/PipelineHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7108">
-              <caret line="3" column="37" lean-forward="true" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="regexner_caseless.tab" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-models.jar!/edu/stanford/nlp/models/kbp/regexner_caseless.tab">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2250">
-              <caret line="55" column="49" lean-forward="true" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
+            <state relative-caret-position="-115">
+              <caret line="75" column="61" selection-start-line="75" selection-start-column="61" selection-end-line="75" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,10 +141,12 @@
       <file leaf-file-name="CustomizableCoreAnnotations.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/CustomizableCoreAnnotations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1515">
-              <caret line="116" column="70" selection-start-line="116" selection-start-column="70" selection-end-line="116" selection-end-column="70" />
+            <state relative-caret-position="734">
+              <caret line="176" column="33" selection-start-line="176" selection-start-column="33" selection-end-line="176" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5345#5346#0" expanded="true" />
+                <element signature="e#5388#5389#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -235,10 +248,11 @@
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestRegex.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" />
-        <option value="$PROJECT_DIR$/annotation_config.properties" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/AnnotatorFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/CustomizableCoreAnnotations.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/CustomizableFieldRegexNERAnnotator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/CustomizableCoreAnnotations.java" />
+        <option value="$PROJECT_DIR$/annotation_config.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/PipelineHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/BasicPipelineExample.java" />
       </list>
     </option>
@@ -267,7 +281,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -526,8 +541,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -583,6 +597,16 @@
         </pattern>
       </extension>
     </configuration>
+    <configuration name="PipelineHelper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.stanford.nlp.pipeline.PipelineHelper" />
+      <module name="EntityAnnotation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.stanford.nlp.pipeline.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="TestRegex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.forward.entitysearch.experiment.TestRegex" />
       <module name="EntityAnnotation" />
@@ -625,10 +649,12 @@
       <item itemvalue="Application.Manager" />
       <item itemvalue="Application.BasicPipelineExample" />
       <item itemvalue="Application.TestRegex" />
+      <item itemvalue="Application.PipelineHelper" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.BasicPipelineExample" />
+        <item itemvalue="Application.PipelineHelper" />
         <item itemvalue="Application.TestSelenium" />
         <item itemvalue="Application.TestRegex" />
         <item itemvalue="Application.Manager" />
@@ -652,16 +678,16 @@
       <workItem from="1526053328881" duration="58185000" />
       <workItem from="1526589505794" duration="10820000" />
       <workItem from="1526678891338" duration="5160000" />
-      <workItem from="1526698295267" duration="21280000" />
+      <workItem from="1526698295267" duration="21787000" />
+      <workItem from="1526919640549" duration="17835000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193789000" />
+    <option name="totallyTimeSpent" value="212131000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="6" y="23" width="1421" height="839" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -672,26 +698,26 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.40261438" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40261438" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32934552" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3166784" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3166784" />
       <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.26666668" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32934552" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.26666668" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -704,7 +730,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <condition expression="token.get(CoreAnnotations.TextAnnotation.class).contains(&quot;217&quot;)" language="JAVA" />
+          <condition expression="token.get(CoreAnnotations.TextAnnotation.class).contains(&quot;Access&quot;)" language="JAVA" />
           <url>jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar!/edu/stanford/nlp/ie/regexp/RegexNERSequenceClassifier.java</url>
           <line>328</line>
           <properties />
@@ -716,6 +742,11 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>token.get(CoreAnnotations.TextAnnotation.class).contains(&quot;Access&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>token.get(CoreAnnotations.TextAnnotation.class).contains(&quot;217&quot;)</expression-string>
         <language-id>JAVA</language-id>
@@ -836,13 +867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/TestRegexNERAnnotation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -986,81 +1010,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/StanfordNLPAnnotator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="15" column="131" selection-start-line="15" selection-start-column="131" selection-end-line="15" selection-end-column="131" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestRegex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="53" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2310">
-          <caret line="169" selection-start-line="169" selection-end-line="169" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annotation_config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/AnnotatorFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/CustomizableCoreAnnotations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="116" column="70" selection-start-line="116" selection-start-column="70" selection-end-line="116" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/StanfordCoreNLP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="446" selection-start-line="446" selection-end-line="446" />
-          <folding>
-            <element signature="e#0#57379#0" expanded="true" />
-            <element signature="e#5497#5498#0" expanded="true" />
-            <element signature="e#5545#5546#0" expanded="true" />
-            <element signature="e#7336#7337#0" expanded="true" />
-            <element signature="e#7383#7384#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar!/edu/stanford/nlp/pipeline/StanfordCoreNLP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1170">
+        <state relative-caret-position="615">
           <caret line="86" column="13" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
         </state>
       </provider>
@@ -1074,20 +1026,17 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-models.jar!/edu/stanford/nlp/models/kbp/tokensregex/org:city_of_headquarters.rules">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="69" column="26" lean-forward="true" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
+        <state relative-caret-position="1035">
+          <caret line="69" column="26" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-models.jar!/edu/stanford/nlp/models/kbp/regexner_caseless.tab">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2250">
-          <caret line="55" column="49" lean-forward="true" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
+        <state relative-caret-position="825">
+          <caret line="55" column="49" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
         </state>
       </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-models.jar!/edu/stanford/nlp/models/kbp/tokensregex/per:title.rules">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0.jar!/edu/stanford/nlp/pipeline/demo/corenlp-brat.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1105,8 +1054,8 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-models.jar!/edu/stanford/nlp/models/kbp/regexner_cased.tab">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7108">
-          <caret line="3" column="37" lean-forward="true" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+        <state relative-caret-position="45">
+          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1126,8 +1075,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/CustomizableFieldRegexNERAnnotator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+        <state relative-caret-position="697">
+          <caret line="136" column="17" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1136,15 +1085,109 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar!/edu/stanford/nlp/ie/regexp/RegexNERSequenceClassifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="335" column="14" lean-forward="true" selection-start-line="335" selection-start-column="14" selection-end-line="335" selection-end-column="43" />
+        <state relative-caret-position="293">
+          <caret line="328" selection-start-line="328" selection-end-line="328" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/CustomizableCoreAnnotations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="734">
+          <caret line="176" column="33" selection-start-line="176" selection-start-column="33" selection-end-line="176" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5345#5346#0" expanded="true" />
+            <element signature="e#5388#5389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/PipelineHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-115">
+          <caret line="75" column="61" selection-start-line="75" selection-start-column="61" selection-end-line="75" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/StanfordCoreNLP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="446" selection-start-line="446" selection-end-line="446" />
+          <folding>
+            <element signature="e#0#57379#0" expanded="true" />
+            <element signature="e#5497#5498#0" expanded="true" />
+            <element signature="e#5545#5546#0" expanded="true" />
+            <element signature="e#7336#7337#0" expanded="true" />
+            <element signature="e#7383#7384#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annotation_config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/TestRegexNERAnnotation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/BasicPipelineExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="70" selection-end-column="11" />
+        <state relative-caret-position="-209">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1020">
+          <caret line="15" column="131" selection-start-line="15" selection-start-column="131" selection-end-line="15" selection-end-column="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestRegex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="53" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/StanfordNLPAnnotator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1858">
+          <caret line="74" column="21" lean-forward="true" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/AnnotatorFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
