@@ -16,8 +16,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebElement;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class HTMLDocumentIngestionManager {
 
@@ -140,6 +144,65 @@ public class HTMLDocumentIngestionManager {
         }
     }
 
+    private static void travelDOMTreeWithSelenium2(RemoteWebElement e, Rectangle r, List<List<CoreLabel>> allTokens, WebDriver driver) {
+        List<CoreLabel> tokens = null;
+        if (e.isDisplayed()) {
+            Rectangle rec = null;
+            try {
+                rec = new Rectangle(e.getLocation().getX(), e.getLocation().getY(), e.getSize().getHeight(), e.getSize().getWidth());
+            } catch (Exception err) {
+                System.err.println("Thee is no layout info in this element: " + e.getTagName());
+            }
+            if (rec != null && e.getTagName().equalsIgnoreCase("img")) {
+                CoreLabel t = new CoreLabel();
+                t.set(CustomizableCoreAnnotations.LayoutXAnnotation.class,rec.x);
+                t.set(CustomizableCoreAnnotations.LayoutYAnnotation.class,rec.y);
+                t.set(CustomizableCoreAnnotations.LayoutHeightAnnotation.class,rec.height);
+                t.set(CustomizableCoreAnnotations.LayoutWidthAnnotation.class,rec.width);
+                t.set(CustomizableCoreAnnotations.TypeAnnotation.class, "img");
+                t.set(CoreAnnotations.TextAnnotation.class,"");
+                tokens = new ArrayList<>();
+                tokens.add(t);
+                allTokens.add(tokens);
+            }
+            if (rec == null) {
+                rec = r;
+            }
+            List<Object> children = (List<Object>) ((ChromeDriver) driver).executeScript("return arguments[0].childNodes;", e);
+            for (int i = 0; i < children.size(); i++) {
+                if (children.get(i) instanceof RemoteWebElement) {
+                    travelDOMTreeWithSelenium2((RemoteWebElement) children.get(i), rec, allTokens, driver);
+                } else {
+                    String nodeName = (String) ((ChromeDriver) driver).executeScript("return arguments[0].childNodes[arguments[1]].nodeName;", e, i);
+                    if (nodeName.equals("#text")) {
+                        String txt = (String) ((ChromeDriver) driver).executeScript("return arguments[0].childNodes[arguments[1]].nodeValue;", e, i);
+                        if (txt.length() > 0) {
+                            tokens = tokenizeText(txt);
+                            if (rec!=null) {
+                                for (CoreLabel t : tokens) {
+                                    t.set(CustomizableCoreAnnotations.LayoutXAnnotation.class,rec.x);
+                                    t.set(CustomizableCoreAnnotations.LayoutYAnnotation.class,rec.y);
+                                    t.set(CustomizableCoreAnnotations.LayoutHeightAnnotation.class,rec.height);
+                                    t.set(CustomizableCoreAnnotations.LayoutWidthAnnotation.class,rec.width);
+                                }
+                            }
+                            allTokens.add(tokens);
+                        }
+                    }
+                }
+            }
+        }
+        // put it out side of the if above because
+        // although <br/> is not displayed, we still add new line when seeing it
+        // tokens is the last arraylist
+        if (LIST_OF_TAGS_CREATING_NEW_LINES.contains(e.getTagName())
+                && tokens != null && tokens.size() > 0 && !tokens.get(tokens.size()-1).get(CoreAnnotations.TextAnnotation.class).matches("\\p{Punct}")){
+            tokens = tokenizeText(".");
+            allTokens.add(tokens);
+        }
+    }
+
+
     private static List<CoreLabel> tokenizeText(String txt) {
         Annotation annotation = new Annotation(txt);
         AnnotatorFactory.getInstance().getTokenizer().annotate(annotation);
@@ -149,8 +212,10 @@ public class HTMLDocumentIngestionManager {
     public static void main(String[] args) {
 
         long time = System.currentTimeMillis();
+        long start = time;
         String baseUrl = "http://www.forwarddatalab.org/kevinchang";
         WebDriver driver = createChromeDriver();
+//        System.out.println(getAllTextWithLayout(driver,baseUrl));
         System.out.println("After creating driver " + (System.currentTimeMillis()-time));
         time = System.currentTimeMillis();
         AnnotatorFactory.getInstance().getAnnotationPipeline();
@@ -164,11 +229,36 @@ public class HTMLDocumentIngestionManager {
         time = System.currentTimeMillis();
         AnnotatorFactory.getInstance().getAnnotationPipeline().annotate(document);
         System.out.println("After annotation " + (System.currentTimeMillis()-time));
+        System.out.println("Total time: " + (System.currentTimeMillis() - start));
+        System.out.println(document.getTitle());
+        System.out.println(document.getURL());
+        System.out.println(document.getHeight() + " " + document.getWidth());
+        try {
+            FileOutputStream fileOut =
+                    new FileOutputStream("serialized/kevin.ser");
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(document);
+            out.close();
+            fileOut.close();
+            System.out.printf("Serialized data is saved in serialized/kevin.ser");
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
         time = System.currentTimeMillis();
         printAnnotatedDocument(document);
         PipelineHelper.printAnnotatedDocument(document, fields);
         System.out.println("After printing results " + (System.currentTimeMillis()-time));
-//        document = annotateHTMLDocument("https://cs.illinois.edu/directory/profile/kcchang", driver);
+        time = System.currentTimeMillis();
+        start = time;
+        document = getHTMLDocumentForAnnotation("https://cs.illinois.edu/directory/profile/kcchang", driver);
+        System.out.println("After creating document for annotation pipeline " + (System.currentTimeMillis()-time));
+        time = System.currentTimeMillis();
+        AnnotatorFactory.getInstance().getAnnotationPipeline().annotate(document);
+        System.out.println("After annotation " + (System.currentTimeMillis()-time));
+        System.out.println("Total time: " + (System.currentTimeMillis() - start));
+        time = System.currentTimeMillis();
+        PipelineHelper.printAnnotatedDocument(document, fields);
+        System.out.println("After printing results " + (System.currentTimeMillis()-time));
 //        printAnnotatedDocument(document);
         driver.close();
 
@@ -225,8 +315,17 @@ public class HTMLDocumentIngestionManager {
         String pageTitle = driver.getTitle();
         System.out.println(url + " " + pageTitle);
         List<CoreLabel> allTokens = new ArrayList<>();
-        travelDOMTreeWithSelenium((RemoteWebElement)driver.findElement(By.xpath("/html/body")),null,allTokens, driver);
+        RemoteWebElement e = (RemoteWebElement) driver.findElement(By.xpath("/html/body"));
+        travelDOMTreeWithSelenium(e,null,allTokens, driver);
         ESAnnotatedHTMLDocument document = new ESAnnotatedHTMLDocument(allTokens);
+//        List<List<CoreLabel>> allTokens = new ArrayList<>();
+//        travelDOMTreeWithSelenium2((RemoteWebElement)driver.findElement(By.xpath("/html/body")),null,allTokens, driver);
+//        ESAnnotatedHTMLDocument document = new ESAnnotatedHTMLDocument();
+//        document.loadFromTokens(allTokens);
+        document.setURL(url);
+        document.setTitle(pageTitle);
+        document.setHeight(e.getSize().height);
+        document.setWidth(e.getSize().width);
         return document;
     }
 
