@@ -83,13 +83,13 @@ public class PipelineHelper {
         String TOPIC_MAPPING = "mapping_files/topic_list.rules";
         String REGEX_MAPPING = "mapping_files/regex_list.rules";
 
-        pipeline.addAnnotator(new CustomizableFieldRegexNERAnnotator(CONFERENCE_MAPPING, false,CustomizableCoreAnnotations.ConferenceTagAnnotation.class));
-        pipeline.addAnnotator(new CustomizableFieldRegexNERAnnotator(CONFERENCE_ACRONYM_MAPPING, true, CustomizableCoreAnnotations.ConferenceAcronymTagAnnotation.class));
-        pipeline.addAnnotator(new CustomizableFieldRegexNERAnnotator(COURSE_MAPPING, false,CustomizableCoreAnnotations.CourseTagAnnotation.class));
-        pipeline.addAnnotator(new CustomizableFieldRegexNERAnnotator(JOURNAL_MAPPING, false,CustomizableCoreAnnotations.JournalTagAnnotation.class));
+        pipeline.addAnnotator(new CustomizableFieldRegexNERAnnotator(CONFERENCE_MAPPING, true,CustomizableCoreAnnotations.ConferenceTagAnnotation.class));
+        pipeline.addAnnotator(new CustomizableFieldRegexNERAnnotator(CONFERENCE_ACRONYM_MAPPING, false, CustomizableCoreAnnotations.ConferenceAcronymTagAnnotation.class));
+        pipeline.addAnnotator(new CustomizableFieldRegexNERAnnotator(COURSE_MAPPING, true,CustomizableCoreAnnotations.CourseTagAnnotation.class));
+        pipeline.addAnnotator(new CustomizableFieldRegexNERAnnotator(JOURNAL_MAPPING, true,CustomizableCoreAnnotations.JournalTagAnnotation.class));
         pipeline.addAnnotator(new CustomizableFieldRegexNERAnnotator(PROFESSOR_MAPPING, false, CustomizableCoreAnnotations.ProfessorTagAnnotation.class));
         pipeline.addAnnotator(new CustomizableFieldRegexNERAnnotator(SPONSOR_MAPPING, true, CustomizableCoreAnnotations.SponsorAgencyTagAnnotation.class));
-        pipeline.addAnnotator(new CustomizableFieldRegexNERAnnotator(TOPIC_MAPPING, false, CustomizableCoreAnnotations.TopicTagAnnotation.class));
+        pipeline.addAnnotator(new CustomizableFieldRegexNERAnnotator(TOPIC_MAPPING, true, CustomizableCoreAnnotations.TopicTagAnnotation.class));
         pipeline.addAnnotator(new CustomizableFieldRegexNERAnnotator(REGEX_MAPPING, true, CustomizableCoreAnnotations.RegexTagAnnotation.class));
 
         List<Class<? extends TypesafeMap.Key<String>>> fields = new ArrayList();

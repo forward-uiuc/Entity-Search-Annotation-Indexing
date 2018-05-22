@@ -4,6 +4,8 @@ import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.ling.CustomizableCoreAnnotations;
 import edu.stanford.nlp.pipeline.Annotation;
+import edu.stanford.nlp.pipeline.PipelineHelper;
+import edu.stanford.nlp.util.TypesafeMap;
 import org.forward.entitysearch.AnnotationProperties;
 import org.forward.entitysearch.experiment.AnnotatorFactory;
 import org.openqa.selenium.By;
@@ -146,12 +148,28 @@ public class HTMLDocumentIngestionManager {
 
     public static void main(String[] args) {
 
+        long time = System.currentTimeMillis();
         String baseUrl = "http://www.forwarddatalab.org/kevinchang";
         WebDriver driver = createChromeDriver();
-        ESAnnotatedHTMLDocument document = annotateHTMLDocument(baseUrl, driver);
+        System.out.println("After creating driver " + (System.currentTimeMillis()-time));
+        time = System.currentTimeMillis();
+        AnnotatorFactory.getInstance().getAnnotationPipeline();
+        System.out.println("After loading the default annotation pipeline " + (System.currentTimeMillis()-time));
+        time = System.currentTimeMillis();
+        ESAnnotatedHTMLDocument document = getHTMLDocumentForAnnotation(baseUrl, driver);
+        System.out.println("After creating document for annotation " + (System.currentTimeMillis()-time));
+        time = System.currentTimeMillis();
+        List<Class<? extends TypesafeMap.Key<String>>> fields = PipelineHelper.addPopularRegexRuleAnnotators(AnnotatorFactory.getInstance().getAnnotationPipeline());
+        System.out.println("After loading extra components for annotation pipeline " + (System.currentTimeMillis()-time));
+        time = System.currentTimeMillis();
+        AnnotatorFactory.getInstance().getAnnotationPipeline().annotate(document);
+        System.out.println("After annotation " + (System.currentTimeMillis()-time));
+        time = System.currentTimeMillis();
         printAnnotatedDocument(document);
-        document = annotateHTMLDocument("https://cs.illinois.edu/directory/profile/kcchang", driver);
-        printAnnotatedDocument(document);
+        PipelineHelper.printAnnotatedDocument(document, fields);
+        System.out.println("After printing results " + (System.currentTimeMillis()-time));
+//        document = annotateHTMLDocument("https://cs.illinois.edu/directory/profile/kcchang", driver);
+//        printAnnotatedDocument(document);
         driver.close();
 
         // List<WebElement> el = driver.findElements(By.cssSelector("*"));
@@ -202,14 +220,13 @@ public class HTMLDocumentIngestionManager {
 
     }
 
-    private static ESAnnotatedHTMLDocument annotateHTMLDocument(String url, WebDriver driver) {
+    private static ESAnnotatedHTMLDocument getHTMLDocumentForAnnotation(String url, WebDriver driver) {
         driver.get(url);
         String pageTitle = driver.getTitle();
         System.out.println(url + " " + pageTitle);
         List<CoreLabel> allTokens = new ArrayList<>();
         travelDOMTreeWithSelenium((RemoteWebElement)driver.findElement(By.xpath("/html/body")),null,allTokens, driver);
         ESAnnotatedHTMLDocument document = new ESAnnotatedHTMLDocument(allTokens);
-        AnnotatorFactory.getInstance().getAnnotationPipeline().annotate(document);
         return document;
     }
 

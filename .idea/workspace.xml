@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbbbc773-7714-4942-be21-383885d0c5dc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/PipelineHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapping_files/conference_acronym_list.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapping_files/conference_list.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapping_files/course_list.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapping_files/course_number_list.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapping_files/journal_list.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapping_files/phone_list.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapping_files/professor_list.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapping_files/sponsor_agency_list.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapping_files/test_regex.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mapping_files/test_regex.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapping_files/topic_list.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapping_files/year_list.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapping_files/zipcode_list.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/CustomizableCoreAnnotations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/CustomizableCoreAnnotations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/TestRegexNERAnnotation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/BasicPipelineExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/BasicPipelineExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/experiment/BasicPipelineExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/experiment/BasicPipelineExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/PipelineHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/PipelineHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/TestRegexNERAnnotation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,7 +27,7 @@
       <file leaf-file-name="BasicPipelineExample.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/BasicPipelineExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-209">
+            <state relative-caret-position="-144">
               <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -65,17 +51,17 @@
       <file leaf-file-name="HTMLDocumentIngestionManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1858">
-              <caret line="74" column="21" lean-forward="true" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+            <state relative-caret-position="340">
+              <caret line="156" column="73" selection-start-line="156" selection-start-column="73" selection-end-line="156" selection-end-column="73" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AnnotatorFactory.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AnnotatorFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/AnnotatorFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+            <state relative-caret-position="164">
+              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,7 +90,7 @@
       <file leaf-file-name="StanfordCoreNLP.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/StanfordCoreNLP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
+            <state relative-caret-position="330">
               <caret line="446" selection-start-line="446" selection-end-line="446" />
               <folding>
                 <element signature="e#0#57379#0" expanded="true" />
@@ -126,11 +112,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PipelineHelper.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PipelineHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/PipelineHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-115">
-              <caret line="75" column="61" selection-start-line="75" selection-start-column="61" selection-end-line="75" selection-end-column="61" />
+            <state relative-caret-position="284">
+              <caret line="88" column="93" selection-start-line="88" selection-start-column="93" selection-end-line="88" selection-end-column="93" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -141,8 +127,8 @@
       <file leaf-file-name="CustomizableCoreAnnotations.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/CustomizableCoreAnnotations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="734">
-              <caret line="176" column="33" selection-start-line="176" selection-start-column="33" selection-end-line="176" selection-end-column="33" />
+            <state relative-caret-position="222">
+              <caret line="35" column="2" lean-forward="true" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5345#5346#0" expanded="true" />
@@ -247,13 +233,13 @@
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ner/annotation/BasicPipelineExample.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestRegex.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/AnnotatorFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/CustomizableFieldRegexNERAnnotator.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/CustomizableCoreAnnotations.java" />
         <option value="$PROJECT_DIR$/annotation_config.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/PipelineHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/BasicPipelineExample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/PipelineHelper.java" />
       </list>
     </option>
   </component>
@@ -575,7 +561,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BasicPipelineExample">
+  <component name="RunManager" selected="Application.TestSelenium">
     <configuration name="BasicPipelineExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.forward.entitysearch.experiment.BasicPipelineExample" />
       <module name="EntityAnnotation" />
@@ -653,9 +639,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestSelenium" />
         <item itemvalue="Application.BasicPipelineExample" />
         <item itemvalue="Application.PipelineHelper" />
-        <item itemvalue="Application.TestSelenium" />
         <item itemvalue="Application.TestRegex" />
         <item itemvalue="Application.Manager" />
       </list>
@@ -679,15 +665,16 @@
       <workItem from="1526589505794" duration="10820000" />
       <workItem from="1526678891338" duration="5160000" />
       <workItem from="1526698295267" duration="21787000" />
-      <workItem from="1526919640549" duration="17835000" />
+      <workItem from="1526919640549" duration="22246000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212131000" />
+    <option name="totallyTimeSpent" value="216542000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="6" y="23" width="1421" height="839" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -698,13 +685,14 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.40261438" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40261438" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3166784" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3166784" />
       <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.26666668" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -717,7 +705,6 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.26666668" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1093,42 +1080,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/CustomizableCoreAnnotations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="734">
-          <caret line="176" column="33" selection-start-line="176" selection-start-column="33" selection-end-line="176" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5345#5346#0" expanded="true" />
-            <element signature="e#5388#5389#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/PipelineHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
-          <caret line="75" column="61" selection-start-line="75" selection-start-column="61" selection-end-line="75" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/StanfordCoreNLP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="446" selection-start-line="446" selection-end-line="446" />
-          <folding>
-            <element signature="e#0#57379#0" expanded="true" />
-            <element signature="e#5497#5498#0" expanded="true" />
-            <element signature="e#5545#5546#0" expanded="true" />
-            <element signature="e#7336#7337#0" expanded="true" />
-            <element signature="e#7383#7384#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/annotation_config.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -1143,10 +1094,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/BasicPipelineExample.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/StanfordNLPAnnotator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-209">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        <state relative-caret-position="161">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/CustomizableCoreAnnotations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="35" column="2" lean-forward="true" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5345#5346#0" expanded="true" />
+            <element signature="e#5388#5389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/AnnotatorFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1167,10 +1140,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/StanfordNLPAnnotator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/StanfordCoreNLP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="30" />
+        <state relative-caret-position="330">
+          <caret line="446" selection-start-line="446" selection-end-line="446" />
+          <folding>
+            <element signature="e#0#57379#0" expanded="true" />
+            <element signature="e#5497#5498#0" expanded="true" />
+            <element signature="e#5545#5546#0" expanded="true" />
+            <element signature="e#7336#7337#0" expanded="true" />
+            <element signature="e#7383#7384#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/BasicPipelineExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1179,15 +1166,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1858">
-          <caret line="74" column="21" lean-forward="true" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+        <state relative-caret-position="340">
+          <caret line="156" column="73" selection-start-line="156" selection-start-column="73" selection-end-line="156" selection-end-column="73" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/AnnotatorFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/PipelineHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+        <state relative-caret-position="284">
+          <caret line="88" column="93" selection-start-line="88" selection-start-column="93" selection-end-line="88" selection-end-column="93" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
