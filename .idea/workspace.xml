@@ -4,71 +4,6 @@
     <list default="true" id="bbbbc773-7714-4942-be21-383885d0c5dc" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serialized/kevin.ser" beforeDir="false" afterPath="$PROJECT_DIR$/serialized/kevin.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations$LayoutHeightAnnotation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations$LayoutWidthAnnotation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations$LayoutXAnnotation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations$LayoutYAnnotation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations$RegexNERAnnotation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations$TypeAnnotation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/ling/CustomizableCoreAnnotations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/pipeline/AnnotationPipeline$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/pipeline/AnnotationPipeline.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/pipeline/RegexNERAnnotator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/pipeline/StanfordCoreNLP$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/pipeline/StanfordCoreNLP$OutputFormat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/pipeline/StanfordCoreNLP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/pipeline/TokensRegexNERAnnotator$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/pipeline/TokensRegexNERAnnotator$Entry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/pipeline/TokensRegexNERAnnotator$PosMatchType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/stanford/nlp/pipeline/TokensRegexNERAnnotator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/AnnotationProperties$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/AnnotationProperties$LazyHolder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/AnnotationProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/Manager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/experiment/AnnotatorFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/experiment/BasicPipelineExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/experiment/StanfordNLPAnnotator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/experiment/TestRegex.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/experiment/TestSelenium.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ingestion/ESAnnotatedHTMLDocument.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ingestion/Ingester.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ingestion/IngestionManager$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ingestion/IngestionManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ingestion/TextFileFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ingestion/WholeDocumentIngestionManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/AnnotationManager$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/AnnotationManager$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/AnnotationManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/AnnotationReconciler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/EntityAnnotation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/EntityCatalog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/EntityInstance.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/EntityType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/GazetteerTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/NERAnnotator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/RootsOnlyReconciler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/SupertypeRootReconciler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/extraction/DBPediaExtractor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/extraction/EntityExtractor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/extraction/GazetteerTableExtractor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/extraction/GazetteerTreeExtractor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/extraction/GolfExtractor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/extraction/GolfExtractorImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/extraction/HuaweiDictionaryExtractor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/extraction/JFlexGazetteerExtractor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/extraction/PhoneEmailExtractor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/extraction/PhoneEmailExtractorImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/extraction/StanfordExtractor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/extraction/StanfordGazetteerExtractor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/extraction/StanfordGazetteerPatternBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/extraction/huawei_tagging/ChineseQuestionTagging.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/extraction/huawei_tagging/EnScore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/treegazetteer/GazetteerNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/treegazetteer/GazetteerTraverser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/forward/entitysearch/ner/annotation/treegazetteer/GazetteerTree.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -95,20 +30,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HTMLDocumentIngestionManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HTMLDocumentIngestionManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+            <state relative-caret-position="200">
+              <caret line="22" column="59" lean-forward="true" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -286,8 +221,8 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/PipelineHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/AnnotatorFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/ESAnnotatedHTMLDocument.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -456,15 +391,16 @@
       <workItem from="1526678891338" duration="5160000" />
       <workItem from="1526698295267" duration="21787000" />
       <workItem from="1526919640549" duration="22246000" />
-      <workItem from="1527016798854" duration="2927000" />
+      <workItem from="1527016798854" duration="3372000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230942000" />
+    <option name="totallyTimeSpent" value="231387000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="6" y="23" width="1421" height="839" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -926,17 +862,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="22" column="59" lean-forward="true" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
         </state>
       </provider>
     </entry>
