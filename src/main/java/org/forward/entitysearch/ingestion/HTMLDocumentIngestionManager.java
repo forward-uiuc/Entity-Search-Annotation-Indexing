@@ -21,7 +21,6 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class HTMLDocumentIngestionManager {
 
@@ -248,17 +247,18 @@ public class HTMLDocumentIngestionManager {
         printAnnotatedDocument(document);
         PipelineHelper.printAnnotatedDocument(document, fields);
         System.out.println("After printing results " + (System.currentTimeMillis()-time));
-        time = System.currentTimeMillis();
-        start = time;
-        document = getHTMLDocumentForAnnotation("https://cs.illinois.edu/directory/profile/kcchang", driver);
-        System.out.println("After creating document for annotation pipeline " + (System.currentTimeMillis()-time));
-        time = System.currentTimeMillis();
-        AnnotatorFactory.getInstance().getAnnotationPipeline().annotate(document);
-        System.out.println("After annotation " + (System.currentTimeMillis()-time));
-        System.out.println("Total time: " + (System.currentTimeMillis() - start));
-        time = System.currentTimeMillis();
-        PipelineHelper.printAnnotatedDocument(document, fields);
-        System.out.println("After printing results " + (System.currentTimeMillis()-time));
+//        time = System.currentTimeMillis();
+//        start = time;
+//        document = getHTMLDocumentForAnnotation("https://cs.illinois.edu/directory/profile/kcchang", driver);
+//        System.out.println("After creating document for annotation pipeline " + (System.currentTimeMillis()-time));
+//        time = System.currentTimeMillis();
+//        AnnotatorFactory.getInstance().getAnnotationPipeline().annotate(document);
+//        System.out.println("After annotation " + (System.currentTimeMillis()-time));
+//        System.out.println("Total time: " + (System.currentTimeMillis() - start));
+//        time = System.currentTimeMillis();
+//        PipelineHelper.printAnnotatedDocument(document, fields);
+//        System.out.println("After printing results " + (System.currentTimeMillis()-time));
+
 //        printAnnotatedDocument(document);
         driver.close();
 
