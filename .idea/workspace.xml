@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbbbc773-7714-4942-be21-383885d0c5dc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,16 +29,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HTMLDocumentIngestionManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HTMLDocumentIngestionManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+            <state relative-caret-position="237">
+              <caret line="248" column="10" selection-start-line="248" selection-start-column="10" selection-end-line="248" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
@@ -221,8 +223,8 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/PipelineHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/AnnotatorFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/ESAnnotatedHTMLDocument.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" />
       </list>
     </option>
   </component>
@@ -391,12 +393,12 @@
       <workItem from="1526678891338" duration="5160000" />
       <workItem from="1526698295267" duration="21787000" />
       <workItem from="1526919640549" duration="22246000" />
-      <workItem from="1527016798854" duration="3372000" />
+      <workItem from="1527016798854" duration="3867000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231387000" />
+    <option name="totallyTimeSpent" value="231882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="6" y="23" width="1421" height="839" extended-state="0" />
@@ -862,17 +864,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="22" column="59" lean-forward="true" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="248" column="10" selection-start-line="248" selection-start-column="10" selection-end-line="248" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

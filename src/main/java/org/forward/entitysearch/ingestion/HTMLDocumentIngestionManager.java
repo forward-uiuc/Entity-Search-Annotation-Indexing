@@ -245,7 +245,7 @@ public class HTMLDocumentIngestionManager {
         }
         time = System.currentTimeMillis();
         printAnnotatedDocument(document);
-        PipelineHelper.printAnnotatedDocument(document, fields);
+//        PipelineHelper.printAnnotatedDocument(document, fields);
         System.out.println("After printing results " + (System.currentTimeMillis()-time));
 //        time = System.currentTimeMillis();
 //        start = time;
