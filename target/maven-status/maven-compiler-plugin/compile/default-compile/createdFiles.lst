@@ -1,0 +1,10 @@
+edu/stanford/nlp/ling/CustomizableCoreAnnotations$ConferenceTagAnnotation.class
+edu/stanford/nlp/ling/CustomizableCoreAnnotations$RegexTagAnnotation.class
+edu/stanford/nlp/ling/CustomizableCoreAnnotations$JournalTagAnnotation.class
+edu/stanford/nlp/ling/CustomizableCoreAnnotations$SponsorAgencyTagAnnotation.class
+edu/stanford/nlp/ling/CustomizableCoreAnnotations$ConferenceAcronymTagAnnotation.class
+edu/stanford/nlp/pipeline/PipelineHelper.class
+edu/stanford/nlp/ling/CustomizableCoreAnnotations$CourseTagAnnotation.class
+edu/stanford/nlp/pipeline/CustomizableFieldRegexNERAnnotator.class
+edu/stanford/nlp/ling/CustomizableCoreAnnotations$TopicTagAnnotation.class
+edu/stanford/nlp/ling/CustomizableCoreAnnotations$ProfessorTagAnnotation.class
