@@ -62,13 +62,13 @@ public class TestSelenium {
 
         String baseUrl = "http://www.forwarddatalab.org/kevinchang";
         baseUrl = "https://charm.cs.illinois.edu/";
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(new ExpectedCondition<Boolean>() {
-            @Override
-            public Boolean apply(WebDriver webDriver) {
-                return driver.findElement(By.xpath("/html/body")).getText().length() != 0;
-            }
-        });
+//        WebDriverWait wait = new WebDriverWait(driver, 10);
+//        wait.until(new ExpectedCondition<Boolean>() {
+//            @Override
+//            public Boolean apply(WebDriver webDriver) {
+//                return driver.findElement(By.xpath("/html/body")).getText().length() != 0;
+//            }
+//        });
         // launch browser and direct it to the Base URL
         driver.get(baseUrl);
 
@@ -87,7 +87,12 @@ public class TestSelenium {
         // The script above is useful to directly get DOM node from selenium
 
         StringBuilder sb2 = new StringBuilder();
-        System.out.println(travelDOMTreeWithSelenium((RemoteWebElement)driver.findElement(By.xpath("/html/body")), driver, sb2));
+        try {
+            System.out.println(travelDOMTreeWithSelenium((RemoteWebElement)driver.findElement(By.xpath("/html/body")), driver, sb2));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println("Hello");
         System.out.println(sb2.toString().replaceAll("\n\n+","\n"));
 
 //        The method below won't work because it will miss the text nodes
