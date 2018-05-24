@@ -24,7 +24,11 @@ public class TestReadObject {
             System.out.println(doc.getTitle());
             System.out.println(doc.get(CoreAnnotations.TokensAnnotation.class).size());
             for (CoreLabel token : doc.get(CoreAnnotations.TokensAnnotation.class)) {
-                System.out.println(token.word() + " " + token.ner() + " " +
+                String word = token.word();
+                if (token.containsKey(CustomizableCoreAnnotations.TypeAnnotation.class)) {
+                    word = token.get(CustomizableCoreAnnotations.TypeAnnotation.class);
+                }
+                System.out.println(word + " " + token.ner() + " " +
                         token.get(CustomizableCoreAnnotations.LayoutHeightAnnotation.class) + " " +
                         token.get(CustomizableCoreAnnotations.LayoutWidthAnnotation.class));
             }

@@ -97,6 +97,13 @@ public class HTMLDocumentIngestionManager {
     }
 
     private static void travelDOMTreeWithSelenium(RemoteWebElement e, Rectangle r, List<CoreLabel> allTokens, WebDriver driver) {
+        try {
+            e.isDisplayed();
+        } catch (Exception ex) {
+            System.out.println("Some dangling nodes are found in this URL");
+            System.err.println("Some dangling nodes are found in this URL");
+            return;
+        }
         if (e.isDisplayed()) {
             Rectangle rec = null;
             try {
@@ -284,7 +291,7 @@ public class HTMLDocumentIngestionManager {
             String filename = urls.get(i).first;
             String baseUrl = urls.get(i).second;
 
-            System.out.println(i + "\t" +  baseUrl);
+            System.out.println(filename + "\t" +  baseUrl);
 
             WebDriver driver = createChromeDriver();
 //        System.out.println(getAllTextWithLayout(driver,baseUrl));
