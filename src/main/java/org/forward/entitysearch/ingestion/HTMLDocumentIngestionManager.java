@@ -266,12 +266,6 @@ public class HTMLDocumentIngestionManager {
         long time = System.currentTimeMillis();
         long start = time;
 
-        WebDriver driver = createChromeDriver();
-//        System.out.println(getAllTextWithLayout(driver,baseUrl));
-        time = System.currentTimeMillis();
-        System.out.println("Finish loading web driver " + (time-start)/1000 + " seconds");
-        start = time;
-
         AnnotatorFactory.getInstance().getAnnotationPipeline();
         time = System.currentTimeMillis();
         System.out.println("Finish loading the default annotation pipeline " + (time-start)/1000 + " seconds");
@@ -291,10 +285,21 @@ public class HTMLDocumentIngestionManager {
 
             System.out.println(i + "\t" +  baseUrl);
 
+            WebDriver driver = createChromeDriver();
+//        System.out.println(getAllTextWithLayout(driver,baseUrl));
+            time = System.currentTimeMillis();
+            System.out.println("Finish loading web driver " + (time-start)/1000 + " seconds");
+            start = time;
+
             ESAnnotatedHTMLDocument document = getHTMLDocumentForAnnotation(baseUrl, driver);
             time = System.currentTimeMillis();
             System.out.println("Finish creating document for annotation " + (time-start)/1000 + " seconds");
             start = time;
+
+            if (document.get(CoreAnnotations.TokensAnnotation.class).size() <= 1) {
+                System.err.println("This URL is probably not a web page " + document.getURL());
+                continue;
+            }
 
             AnnotatorFactory.getInstance().getAnnotationPipeline().annotate(document);
             time = System.currentTimeMillis();
@@ -324,9 +329,10 @@ public class HTMLDocumentIngestionManager {
                 printAnnotatedDocument(document);
                 PipelineHelper.printAnnotatedDocument(document, fields);
             }
+
+            driver.close();
         }
 
-        driver.close();
 
 //        time = System.currentTimeMillis();
 //        start = time;

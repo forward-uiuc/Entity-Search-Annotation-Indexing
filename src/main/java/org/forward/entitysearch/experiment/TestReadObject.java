@@ -14,13 +14,14 @@ public class TestReadObject {
         FileInputStream fin = null;
         ObjectInputStream ois = null;
         try {
-            fin = new FileInputStream("serialized/kevin.ser");
+            fin = new FileInputStream("serialized/2.ser");
             ois = new ObjectInputStream(fin);
             doc = (ESAnnotatedHTMLDocument) ois.readObject();
         } catch (Exception e) {
             e.printStackTrace();
         }
         if (doc != null) {
+            System.out.println(doc.getTitle());
             System.out.println(doc.get(CoreAnnotations.TokensAnnotation.class).size());
             for (CoreLabel token : doc.get(CoreAnnotations.TokensAnnotation.class)) {
                 System.out.println(token.word() + " " + token.ner() + " " +
