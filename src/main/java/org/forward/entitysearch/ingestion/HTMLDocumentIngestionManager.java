@@ -311,7 +311,15 @@ public class HTMLDocumentIngestionManager {
 
             System.out.println(filename + "\t" +  baseUrl);
 
-            ESAnnotatedHTMLDocument document = getHTMLDocumentForAnnotation(baseUrl, driver);
+            ESAnnotatedHTMLDocument document = null;
+            try {
+                document = getHTMLDocumentForAnnotation(baseUrl, driver);
+            } catch(Exception ex) {
+                System.out.println("There is some exception when parsing the document ");
+                System.err.println("There is some exception when parsing the document in this URL: " + baseUrl);
+                System.err.println(ex.getClass());
+                continue;
+            }
             time = System.currentTimeMillis();
             System.out.println("Finish creating document for annotation " + (time-start)/1000 + " seconds");
             start = time;
@@ -339,8 +347,8 @@ public class HTMLDocumentIngestionManager {
             try {
                 AnnotatorFactory.getInstance().getAnnotationPipeline().annotate(document);
             } catch(StaleElementReferenceException ex) {
-                System.out.println("Some dangling nodes are found in this URL");
-                System.err.println("Some dangling nodes are found in this URL: " + baseUrl);
+                System.out.println("There is an exception when annotating this document");
+                System.err.println("There is an exception when the document in this URL: " + baseUrl);
                 continue;
             }
 
