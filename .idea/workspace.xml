@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbbbc773-7714-4942-be21-383885d0c5dc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_urls.csv" beforeDir="false" afterPath="$PROJECT_DIR$/test_urls.csv" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HTMLDocumentIngestionManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HTMLDocumentIngestionManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="350" column="66" selection-start-line="350" selection-start-column="66" selection-end-line="350" selection-end-column="66" />
+            <state relative-caret-position="321">
+              <caret line="466" column="24" lean-forward="true" selection-start-line="466" selection-start-column="24" selection-end-line="466" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestSelenium.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TestSelenium.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="98" selection-start-line="98" selection-end-line="98" />
+            <state relative-caret-position="336">
+              <caret line="76" column="60" lean-forward="true" selection-start-line="76" selection-start-column="60" selection-end-line="76" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -156,7 +158,7 @@
       <find>System.</find>
       <find>System</find>
       <find>myLabel</find>
-      <find />
+      <find>After annotation</find>
       <find>serial</find>
       <find>im</find>
       <find>total</find>
@@ -222,9 +224,9 @@
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/ESAnnotatedHTMLDocument.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ner/annotation/AnnotatorFactory.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestReadObject.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java" />
       </list>
     </option>
   </component>
@@ -452,12 +454,12 @@
       <workItem from="1526678891338" duration="5160000" />
       <workItem from="1526698295267" duration="21787000" />
       <workItem from="1526919640549" duration="22246000" />
-      <workItem from="1527016798854" duration="32003000" />
+      <workItem from="1527016798854" duration="33396000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260018000" />
+    <option name="totallyTimeSpent" value="261411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="6" y="23" width="1421" height="839" extended-state="0" />
@@ -922,13 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestReadObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -941,11 +936,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="350" column="66" selection-start-line="350" selection-start-column="66" selection-end-line="350" selection-end-column="66" />
+        <state relative-caret-position="321">
+          <caret line="466" column="24" lean-forward="true" selection-start-line="466" selection-start-column="24" selection-end-line="466" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="76" column="60" lean-forward="true" selection-start-line="76" selection-start-column="60" selection-end-line="76" selection-end-column="60" />
         </state>
       </provider>
     </entry>

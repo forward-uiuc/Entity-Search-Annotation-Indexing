@@ -23,6 +23,7 @@ import org.apache.commons.cli.*;
 public class HTMLDocumentIngestionManager {
 
     public static final String WEB_DOCUMENT_CANNOT_BE_OPENED_ERROR = "oOo This web document cannot be opened by browser oOo";
+    public static final int MAX_LENGTH_OF_PAGE_SOURCE = 400000;
     public static ArrayList<String> LIST_OF_TAGS_CREATING_NEW_LINES = new ArrayList<>();
 
     static {
@@ -459,6 +460,11 @@ public class HTMLDocumentIngestionManager {
             return null; // avoid the case when the new URL is a file which does not navigate the driver to a new page
         } else {
             CUR_URL = currentUrl;
+        }
+        if (driver.getPageSource().length() > MAX_LENGTH_OF_PAGE_SOURCE) {
+            System.out.println("This document is too long!");
+            System.err.println("This document is too long " + url);
+            return null;
         }
         String pageTitle = driver.getTitle();
         List<CoreLabel> allTokens = new ArrayList<>();

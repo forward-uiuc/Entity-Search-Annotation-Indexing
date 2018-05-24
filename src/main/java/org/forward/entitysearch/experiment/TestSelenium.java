@@ -61,8 +61,10 @@ public class TestSelenium {
         WebDriver driver = new ChromeDriver(options);
 
         String baseUrl = "http://www.forwarddatalab.org/kevinchang";
-        baseUrl = "https://charm.cs.illinois.edu/";
-        baseUrl = "http://codingspectator.cs.illinois.edu/updates/helios/";
+//        baseUrl = "https://charm.cs.illinois.edu/";
+//        baseUrl = "http://codingspectator.cs.illinois.edu/updates/helios/";
+//        baseUrl = "http://nlp.cs.illinois.edu/HockenmaierGroup/8k-pictures.html";
+        baseUrl = "http://hockenmaier.cs.illinois.edu/DenotationGraph/graph/index10.html";
 //        WebDriverWait wait = new WebDriverWait(driver, 10);
 //        wait.until(new ExpectedCondition<Boolean>() {
 //            @Override
@@ -72,6 +74,8 @@ public class TestSelenium {
 //        });
         // launch browser and direct it to the Base URL
         driver.get(baseUrl);
+        System.out.println(driver.getPageSource().length());
+        System.exit(0);
 
         // get the title and print it
         String pageTitle = null;
