@@ -5,9 +5,10 @@ import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.ling.CustomizableCoreAnnotations;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.PipelineHelper;
+import edu.stanford.nlp.util.Pair;
 import edu.stanford.nlp.util.TypesafeMap;
 import org.forward.entitysearch.AnnotationProperties;
-import org.forward.entitysearch.experiment.AnnotatorFactory;
+import org.forward.entitysearch.ner.annotation.AnnotatorFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Rectangle;
@@ -16,11 +17,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebElement;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import org.apache.commons.cli.*;
 
 public class HTMLDocumentIngestionManager {
 
@@ -210,43 +216,118 @@ public class HTMLDocumentIngestionManager {
 
     public static void main(String[] args) {
 
+        Options options = new Options();
+
+        Option input = new Option("i", "input", true, "input url");
+        input.setRequired(true);
+        options.addOption(input);
+
+        Option output = new Option("o", "output", true, "output folder for serialized files");
+        output.setRequired(true);
+        options.addOption(output);
+
+        Option verbose = new Option("v", "verbose", true, "print additional message for debugging");
+        verbose.setRequired(false);
+        options.addOption(verbose);
+
+        CommandLineParser parser = new DefaultParser();
+        HelpFormatter formatter = new HelpFormatter();
+        CommandLine cmd;
+
+        try {
+            cmd = parser.parse(options, args);
+        } catch (ParseException e) {
+            System.out.println(e.getMessage());
+            formatter.printHelp("utility-name", options);
+
+            System.exit(1);
+            return;
+        }
+
+        boolean VERBOSE = false;
+        if (cmd.hasOption("verbose"))
+            VERBOSE = Boolean.parseBoolean(cmd.getOptionValue("verbose"));
+        String inputFile = cmd.getOptionValue("input");
+        String outputFolder = cmd.getOptionValue("output");
+
+        List<Pair<String,String>> urls = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(inputFile))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] tmp = line.split("\t");
+                urls.add(new Pair<>(tmp[0],tmp[1]));
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         long time = System.currentTimeMillis();
         long start = time;
-        String baseUrl = "http://www.forwarddatalab.org/kevinchang";
+
         WebDriver driver = createChromeDriver();
 //        System.out.println(getAllTextWithLayout(driver,baseUrl));
-        System.out.println("After creating driver " + (System.currentTimeMillis()-time));
         time = System.currentTimeMillis();
+        System.out.println("Finish loading web driver " + (time-start)/1000 + " seconds");
+        start = time;
+
         AnnotatorFactory.getInstance().getAnnotationPipeline();
-        System.out.println("After loading the default annotation pipeline " + (System.currentTimeMillis()-time));
         time = System.currentTimeMillis();
-        ESAnnotatedHTMLDocument document = getHTMLDocumentForAnnotation(baseUrl, driver);
-        System.out.println("After creating document for annotation " + (System.currentTimeMillis()-time));
-        time = System.currentTimeMillis();
+        System.out.println("Finish loading the default annotation pipeline " + (time-start)/1000 + " seconds");
+        start = time;
+
         List<Class<? extends TypesafeMap.Key<String>>> fields = PipelineHelper.addPopularRegexRuleAnnotators(AnnotatorFactory.getInstance().getAnnotationPipeline());
-        System.out.println("After loading extra components for annotation pipeline " + (System.currentTimeMillis()-time));
         time = System.currentTimeMillis();
-        AnnotatorFactory.getInstance().getAnnotationPipeline().annotate(document);
-        System.out.println("After annotation " + (System.currentTimeMillis()-time));
-        System.out.println("Total time: " + (System.currentTimeMillis() - start));
-        System.out.println(document.getTitle());
-        System.out.println(document.getURL());
-        System.out.println(document.getHeight() + " " + document.getWidth());
-        try {
-            FileOutputStream fileOut =
-                    new FileOutputStream("serialized/kevin.ser");
-            ObjectOutputStream out = new ObjectOutputStream(fileOut);
-            out.writeObject(document);
-            out.close();
-            fileOut.close();
-            System.out.printf("Serialized data is saved in serialized/kevin.ser");
-        } catch (IOException i) {
-            i.printStackTrace();
+        System.out.println("Finish loading extra annotators " + (time-start)/1000 + " seconds");
+        start = time;
+
+        System.out.println("Ready to download and annotate HTML documents");
+        System.out.println("----------------------------------------------");
+
+        for (int i = 0; i < urls.size(); i++) {
+            String filename = urls.get(i).first;
+            String baseUrl = urls.get(i).second;
+
+            System.out.println(i + "\t" +  baseUrl);
+
+            ESAnnotatedHTMLDocument document = getHTMLDocumentForAnnotation(baseUrl, driver);
+            time = System.currentTimeMillis();
+            System.out.println("Finish creating document for annotation " + (time-start)/1000 + " seconds");
+            start = time;
+
+            AnnotatorFactory.getInstance().getAnnotationPipeline().annotate(document);
+            time = System.currentTimeMillis();
+            System.out.println("Finish annotation " + (time-start)/1000 + " seconds");
+            start = time;
+
+            try {
+                String path = outputFolder + filename + ".ser";
+                FileOutputStream fileOut =
+                        new FileOutputStream(path);
+                ObjectOutputStream out = new ObjectOutputStream(fileOut);
+                out.writeObject(document);
+                out.close();
+                fileOut.close();
+                if (VERBOSE)
+                    System.out.println("Serialized data is saved to " + path);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            time = System.currentTimeMillis();
+            if (VERBOSE) {
+                System.out.println("Finish serialization " + (time-start)/1000 + " seconds");
+                System.out.println("Done with " + document.getTitle() + " with size " + document.getHeight() + " " + document.getWidth());
+            }
+
+            if (VERBOSE) {
+                printAnnotatedDocument(document);
+                PipelineHelper.printAnnotatedDocument(document, fields);
+            }
         }
-        time = System.currentTimeMillis();
-        printAnnotatedDocument(document);
-//        PipelineHelper.printAnnotatedDocument(document, fields);
-        System.out.println("After printing results " + (System.currentTimeMillis()-time));
+
+        driver.close();
+
 //        time = System.currentTimeMillis();
 //        start = time;
 //        document = getHTMLDocumentForAnnotation("https://cs.illinois.edu/directory/profile/kcchang", driver);
@@ -260,7 +341,6 @@ public class HTMLDocumentIngestionManager {
 //        System.out.println("After printing results " + (System.currentTimeMillis()-time));
 
 //        printAnnotatedDocument(document);
-        driver.close();
 
         // List<WebElement> el = driver.findElements(By.cssSelector("*"));
         // It is not working because it will miss text nodes
@@ -313,7 +393,6 @@ public class HTMLDocumentIngestionManager {
     private static ESAnnotatedHTMLDocument getHTMLDocumentForAnnotation(String url, WebDriver driver) {
         driver.get(url);
         String pageTitle = driver.getTitle();
-        System.out.println(url + " " + pageTitle);
         List<CoreLabel> allTokens = new ArrayList<>();
         RemoteWebElement e = (RemoteWebElement) driver.findElement(By.xpath("/html/body"));
         travelDOMTreeWithSelenium(e,null,allTokens, driver);
