@@ -27,6 +27,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.apache.commons.cli.*;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HTMLDocumentIngestionManager {
 
@@ -296,6 +297,11 @@ public class HTMLDocumentIngestionManager {
             System.out.println("Finish creating document for annotation " + (time-start)/1000 + " seconds");
             start = time;
 
+            if (document == null) {
+                System.err.println("This URL cannot be rendered by Selenium " + document.getURL());
+                continue;
+            }
+
             if (document.get(CoreAnnotations.TokensAnnotation.class).size() <= 1) {
                 System.err.println("This URL is probably not a web page " + document.getURL());
                 continue;
@@ -400,18 +406,23 @@ public class HTMLDocumentIngestionManager {
         driver.get(url);
         String pageTitle = driver.getTitle();
         List<CoreLabel> allTokens = new ArrayList<>();
-        RemoteWebElement e = (RemoteWebElement) driver.findElement(By.xpath("/html/body"));
-        travelDOMTreeWithSelenium(e,null,allTokens, driver);
-        ESAnnotatedHTMLDocument document = new ESAnnotatedHTMLDocument(allTokens);
+        try{
+            RemoteWebElement e = (RemoteWebElement) driver.findElement(By.xpath("/html/body"));
+            travelDOMTreeWithSelenium(e,null,allTokens, driver);
+            ESAnnotatedHTMLDocument document = new ESAnnotatedHTMLDocument(allTokens);
 //        List<List<CoreLabel>> allTokens = new ArrayList<>();
 //        travelDOMTreeWithSelenium2((RemoteWebElement)driver.findElement(By.xpath("/html/body")),null,allTokens, driver);
 //        ESAnnotatedHTMLDocument document = new ESAnnotatedHTMLDocument();
 //        document.loadFromTokens(allTokens);
-        document.setURL(url);
-        document.setTitle(pageTitle);
-        document.setHeight(e.getSize().height);
-        document.setWidth(e.getSize().width);
-        return document;
+            document.setURL(url);
+            document.setTitle(pageTitle);
+            document.setHeight(e.getSize().height);
+            document.setWidth(e.getSize().width);
+            return document;
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return null;
     }
 
     private static void printAnnotatedDocument(ESAnnotatedHTMLDocument document) {

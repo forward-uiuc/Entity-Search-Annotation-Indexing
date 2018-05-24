@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,7 +61,14 @@ public class TestSelenium {
         WebDriver driver = new ChromeDriver(options);
 
         String baseUrl = "http://www.forwarddatalab.org/kevinchang";
-
+        baseUrl = "https://charm.cs.illinois.edu/";
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(new ExpectedCondition<Boolean>() {
+            @Override
+            public Boolean apply(WebDriver webDriver) {
+                return driver.findElement(By.xpath("/html/body")).getText().length() != 0;
+            }
+        });
         // launch browser and direct it to the Base URL
         driver.get(baseUrl);
 
