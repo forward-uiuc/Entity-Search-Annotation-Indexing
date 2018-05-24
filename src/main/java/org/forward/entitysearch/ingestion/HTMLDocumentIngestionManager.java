@@ -274,6 +274,12 @@ public class HTMLDocumentIngestionManager {
         long time = System.currentTimeMillis();
         long start = time;
 
+        WebDriver driver = createChromeDriver();
+//        System.out.println(getAllTextWithLayout(driver,baseUrl));
+        time = System.currentTimeMillis();
+        System.out.println("Finish loading web driver " + (time-start)/1000 + " seconds");
+        start = time;
+
         AnnotatorFactory.getInstance().getAnnotationPipeline();
         time = System.currentTimeMillis();
         System.out.println("Finish loading the default annotation pipeline " + (time-start)/1000 + " seconds");
@@ -292,12 +298,6 @@ public class HTMLDocumentIngestionManager {
             String baseUrl = urls.get(i).second;
 
             System.out.println(filename + "\t" +  baseUrl);
-
-            WebDriver driver = createChromeDriver();
-//        System.out.println(getAllTextWithLayout(driver,baseUrl));
-            time = System.currentTimeMillis();
-            System.out.println("Finish loading web driver " + (time-start)/1000 + " seconds");
-            start = time;
 
             ESAnnotatedHTMLDocument document = getHTMLDocumentForAnnotation(baseUrl, driver);
             time = System.currentTimeMillis();
@@ -344,9 +344,8 @@ public class HTMLDocumentIngestionManager {
                 printAnnotatedDocument(document);
                 PipelineHelper.printAnnotatedDocument(document, fields);
             }
-
-            driver.close();
         }
+        driver.close();
 
 
 //        time = System.currentTimeMillis();
@@ -413,6 +412,11 @@ public class HTMLDocumentIngestionManager {
 
     private static ESAnnotatedHTMLDocument getHTMLDocumentForAnnotation(String url, WebDriver driver) {
         driver.get(url);
+        if (driver.getCurrentUrl().equalsIgnoreCase(CUR_URL)) {
+            return null; // avoid the case when the new URL is a file which does not navigate the driver to a new page
+        } else {
+            CUR_URL = driver.getCurrentUrl();
+        }
         String pageTitle = driver.getTitle();
         List<CoreLabel> allTokens = new ArrayList<>();
         RemoteWebElement e;
@@ -470,4 +474,6 @@ public class HTMLDocumentIngestionManager {
         travelDOMTreeWithSelenium((RemoteWebElement)driver.findElement(By.xpath("/html/body")), sb2, driver);
         return sb2.toString().replaceAll("\n\n+", "\n");
     }
+
+    private static String CUR_URL = "";
 }
