@@ -14,7 +14,7 @@ public class TestReadObject {
         FileInputStream fin = null;
         ObjectInputStream ois = null;
         try {
-            fin = new FileInputStream("serialized/0.ser");
+            fin = new FileInputStream("serialized/4.ser");
             ois = new ObjectInputStream(fin);
             doc = (ESAnnotatedHTMLDocument) ois.readObject();
         } catch (Exception e) {

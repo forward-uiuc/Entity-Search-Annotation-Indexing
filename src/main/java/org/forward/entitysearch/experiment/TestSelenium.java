@@ -62,6 +62,7 @@ public class TestSelenium {
 
         String baseUrl = "http://www.forwarddatalab.org/kevinchang";
         baseUrl = "https://charm.cs.illinois.edu/";
+        baseUrl = "http://codingspectator.cs.illinois.edu/updates/helios/";
 //        WebDriverWait wait = new WebDriverWait(driver, 10);
 //        wait.until(new ExpectedCondition<Boolean>() {
 //            @Override
@@ -73,7 +74,14 @@ public class TestSelenium {
         driver.get(baseUrl);
 
         // get the title and print it
-        String pageTitle = driver.getTitle();
+        String pageTitle = null;
+        try{
+            pageTitle = driver.getTitle();
+        } catch (Exception e) {
+            System.out.println("Get errors in " + baseUrl);
+            System.out.println(e.getCause());
+        }
+
         System.out.println(pageTitle);
 
         // List<WebElement> el = driver.findElements(By.cssSelector("*"));

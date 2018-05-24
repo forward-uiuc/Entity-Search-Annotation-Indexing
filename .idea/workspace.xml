@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbbbc773-7714-4942-be21-383885d0c5dc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestReadObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestReadObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_urls.csv" beforeDir="false" afterPath="$PROJECT_DIR$/test_urls.csv" afterDir="false" />
     </list>
@@ -30,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HTMLDocumentIngestionManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HTMLDocumentIngestionManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="415" column="118" selection-start-line="415" selection-start-column="118" selection-end-line="415" selection-end-column="118" />
+            <state relative-caret-position="156">
+              <caret line="299" column="48" lean-forward="true" selection-start-line="299" selection-start-column="48" selection-end-line="299" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,8 +47,8 @@
       <file leaf-file-name="TestSelenium.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="97" column="47" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
+            <state relative-caret-position="666">
+              <caret line="98" selection-start-line="98" selection-end-line="98" />
             </state>
           </provider>
         </entry>
@@ -81,7 +83,7 @@
       <file leaf-file-name="ESAnnotatedHTMLDocument.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/ESAnnotatedHTMLDocument.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
+            <state relative-caret-position="1020">
               <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -101,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestReadObject.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TestReadObject.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestReadObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+            <state relative-caret-position="240">
+              <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -157,7 +159,7 @@
       <find>System.</find>
       <find>System</find>
       <find>myLabel</find>
-      <find>After annotation</find>
+      <find />
       <find>serial</find>
       <find>im</find>
       <find>total</find>
@@ -224,8 +226,8 @@
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ner/annotation/AnnotatorFactory.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestReadObject.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestReadObject.java" />
       </list>
     </option>
   </component>
@@ -361,7 +363,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestSelenium">
+  <component name="RunManager" selected="Application.TestReadObject">
     <configuration name="BasicPipelineExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.forward.entitysearch.experiment.BasicPipelineExample" />
       <module name="EntityAnnotation" />
@@ -406,7 +408,7 @@
     <configuration name="TestSelenium" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="org.forward.entitysearch.ingestion.HTMLDocumentIngestionManager" />
       <module name="EntityAnnotation" />
-      <option name="PROGRAM_PARAMETERS" value="-i test_urls.csv -o serialized/ -v false" />
+      <option name="PROGRAM_PARAMETERS" value="-i test_urls.csv -o serialized/ -v false -s 3" />
       <option name="VM_PARAMETERS" value="-Xmx4096m" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
@@ -426,9 +428,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestSelenium" />
         <item itemvalue="Application.TestReadObject" />
         <item itemvalue="Application.TestSelenium (1)" />
+        <item itemvalue="Application.TestSelenium" />
         <item itemvalue="Application.BasicPipelineExample" />
         <item itemvalue="Application.PipelineHelper" />
       </list>
@@ -453,12 +455,12 @@
       <workItem from="1526678891338" duration="5160000" />
       <workItem from="1526698295267" duration="21787000" />
       <workItem from="1526919640549" duration="22246000" />
-      <workItem from="1527016798854" duration="24333000" />
+      <workItem from="1527016798854" duration="31029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="252348000" />
+    <option name="totallyTimeSpent" value="259044000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="6" y="23" width="1421" height="839" extended-state="0" />
@@ -904,9 +906,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/CustomizableCoreAnnotations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/ESAnnotatedHTMLDocument.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
+        <state relative-caret-position="1020">
           <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -916,34 +925,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/CustomizableCoreAnnotations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="97" column="47" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
+        <state relative-caret-position="666">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestReadObject.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        <state relative-caret-position="156">
+          <caret line="299" column="48" lean-forward="true" selection-start-line="299" selection-start-column="48" selection-end-line="299" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestReadObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="415" column="118" selection-start-line="415" selection-start-column="118" selection-end-line="415" selection-end-column="118" />
+        <state relative-caret-position="240">
+          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

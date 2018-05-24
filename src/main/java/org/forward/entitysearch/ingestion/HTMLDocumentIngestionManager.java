@@ -9,28 +9,20 @@ import edu.stanford.nlp.util.Pair;
 import edu.stanford.nlp.util.TypesafeMap;
 import org.forward.entitysearch.AnnotationProperties;
 import org.forward.entitysearch.ner.annotation.AnnotatorFactory;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.Rectangle;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import org.apache.commons.cli.*;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HTMLDocumentIngestionManager {
 
+    public static final String WEB_DOCUMENT_CANNOT_BE_OPENED_ERROR = "oOo This web document cannot be opened by browser oOo";
     public static ArrayList<String> LIST_OF_TAGS_CREATING_NEW_LINES = new ArrayList<>();
 
     static {
@@ -96,20 +88,22 @@ public class HTMLDocumentIngestionManager {
         return count;
     }
 
-    private static void travelDOMTreeWithSelenium(RemoteWebElement e, Rectangle r, List<CoreLabel> allTokens, WebDriver driver) {
+    private static void travelDOMTreeWithSelenium(RemoteWebElement e, Rectangle r, List<CoreLabel> allTokens, WebDriver driver) throws StaleElementReferenceException {
         try {
             e.isDisplayed();
         } catch (Exception ex) {
             System.out.println("Some dangling nodes are found in this URL");
             System.err.println("Some dangling nodes are found in this URL");
             return;
+            // Doing it is more beneficial than throwing errors because we might get partial documents.
+            // Actually it is both good and bad. Should think of a good strategy here!
         }
         if (e.isDisplayed()) {
             Rectangle rec = null;
             try {
                 rec = new Rectangle(e.getLocation().getX(), e.getLocation().getY(), e.getSize().getHeight(), e.getSize().getWidth());
             } catch (Exception err) {
-                System.err.println("Thee is no layout info in this element: " + e.getTagName());
+                System.err.println("There is no layout info in this element: " + e.getTagName());
             }
             if (rec != null && e.getTagName().equalsIgnoreCase("img")) {
                 CoreLabel t = new CoreLabel();
@@ -238,6 +232,10 @@ public class HTMLDocumentIngestionManager {
         verbose.setRequired(false);
         options.addOption(verbose);
 
+        Option startingName = new Option("s", "start", true, "skip until seeing the url with this name");
+        startingName.setRequired(false);
+        options.addOption(startingName);
+
         CommandLineParser parser = new DefaultParser();
         HelpFormatter formatter = new HelpFormatter();
         CommandLine cmd;
@@ -255,6 +253,11 @@ public class HTMLDocumentIngestionManager {
         boolean VERBOSE = false;
         if (cmd.hasOption("verbose"))
             VERBOSE = Boolean.parseBoolean(cmd.getOptionValue("verbose"));
+
+        String STARTING_FILE_NAME = null;
+        if (cmd.hasOption("start"))
+            STARTING_FILE_NAME = cmd.getOptionValue("start");
+
         String inputFile = cmd.getOptionValue("input");
         String outputFolder = cmd.getOptionValue("output");
 
@@ -297,6 +300,15 @@ public class HTMLDocumentIngestionManager {
             String filename = urls.get(i).first;
             String baseUrl = urls.get(i).second;
 
+            if (STARTING_FILE_NAME != null) {
+                if (filename.equals(STARTING_FILE_NAME)) {
+                    STARTING_FILE_NAME = null;
+                } else {
+                    continue;
+                    // skip until seeing the file name
+                }
+            }
+
             System.out.println(filename + "\t" +  baseUrl);
 
             ESAnnotatedHTMLDocument document = getHTMLDocumentForAnnotation(baseUrl, driver);
@@ -310,13 +322,28 @@ public class HTMLDocumentIngestionManager {
                 continue;
             }
 
+            if (document.getTitle().equals(WEB_DOCUMENT_CANNOT_BE_OPENED_ERROR)) {
+                System.out.println("This web document cannot be opened by browser!");
+                System.err.println("This web document cannot be opened by browser: " + baseUrl);
+                driver.close();
+                driver = createChromeDriver();
+                continue;
+            }
+
             if (document.get(CoreAnnotations.TokensAnnotation.class).size() <= 1) {
                 System.out.println("This URL is probably not a web page!");
                 System.err.println("This URL is probably not a web page " + document.getURL());
                 continue;
             }
 
-            AnnotatorFactory.getInstance().getAnnotationPipeline().annotate(document);
+            try {
+                AnnotatorFactory.getInstance().getAnnotationPipeline().annotate(document);
+            } catch(StaleElementReferenceException ex) {
+                System.out.println("Some dangling nodes are found in this URL");
+                System.err.println("Some dangling nodes are found in this URL: " + baseUrl);
+                continue;
+            }
+
             time = System.currentTimeMillis();
             System.out.println("Finish annotation " + (time-start)/1000 + " seconds");
             start = time;
@@ -410,12 +437,20 @@ public class HTMLDocumentIngestionManager {
 
     }
 
-    private static ESAnnotatedHTMLDocument getHTMLDocumentForAnnotation(String url, WebDriver driver) {
+    private static ESAnnotatedHTMLDocument getHTMLDocumentForAnnotation(String url, WebDriver driver) throws StaleElementReferenceException{
         driver.get(url);
-        if (driver.getCurrentUrl().equalsIgnoreCase(CUR_URL)) {
+        String currentUrl;
+        try {
+            currentUrl = driver.getCurrentUrl();
+        } catch (Exception ex) {
+            ESAnnotatedHTMLDocument doc = new ESAnnotatedHTMLDocument();
+            doc.setTitle(WEB_DOCUMENT_CANNOT_BE_OPENED_ERROR);
+            return doc;
+        }
+        if (currentUrl.equalsIgnoreCase(CUR_URL)) {
             return null; // avoid the case when the new URL is a file which does not navigate the driver to a new page
         } else {
-            CUR_URL = driver.getCurrentUrl();
+            CUR_URL = currentUrl;
         }
         String pageTitle = driver.getTitle();
         List<CoreLabel> allTokens = new ArrayList<>();
