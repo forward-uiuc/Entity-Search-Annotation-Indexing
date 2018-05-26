@@ -15,7 +15,10 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 import org.apache.commons.cli.*;
@@ -297,6 +300,8 @@ public class HTMLDocumentIngestionManager {
         System.out.println("Ready to download and annotate HTML documents");
         System.out.println("----------------------------------------------");
 
+        HashSet<String> seenUrls = new HashSet<>();
+
         for (int i = 0; i < urls.size(); i++) {
             String filename = urls.get(i).first;
             String baseUrl = urls.get(i).second;
@@ -312,18 +317,50 @@ public class HTMLDocumentIngestionManager {
 
             System.out.println(filename + "\t" +  baseUrl);
 
+            Integer responseCode = getHttpResponseCode(baseUrl);
+            if (responseCode == null || responseCode >= 400) {
+                System.out.println("Bad Request!");
+                System.err.println("Bad Request: " + baseUrl);
+                continue;
+            }
+
+            driver.get(baseUrl);
+            String currentUrl; // final url after redirects
+            try {
+                currentUrl = driver.getCurrentUrl();
+            } catch (Exception ex) {
+                System.out.println("This web document cannot be opened by browser!");
+                System.err.println("This web document cannot be opened by browser: " + baseUrl);
+                driver.close();
+                driver = createChromeDriver();
+                continue;
+            }
+            if (seenUrls.contains(currentUrl)) {
+                // for deduplication
+                // and also for avoiding the case when the new URL is a file which does not navigate the driver to a new page
+                System.out.println("This URL has been rendered " + currentUrl);
+                System.err.println("This URL has been rendered " + currentUrl);
+                if (!baseUrl.equalsIgnoreCase(currentUrl)) {
+                    System.out.println("It has been redirected from the base URL: " + baseUrl);
+                    System.err.println("It has been redirected from the base URL: " + baseUrl);
+                }
+                continue;
+            }
+            if (driver.getPageSource().length() > MAX_LENGTH_OF_PAGE_SOURCE) {
+                System.out.println("This document is too long!");
+                System.err.println("This document is too long " + baseUrl);
+                continue;
+            }
+
             ESAnnotatedHTMLDocument document = null;
             try {
-                document = getHTMLDocumentForAnnotation(baseUrl, driver);
+                document = getHTMLDocumentForAnnotation(driver);
             } catch(Exception ex) {
                 System.out.println("There is some exception when parsing the document ");
                 System.err.println("There is some exception when parsing the document in this URL: " + baseUrl);
                 System.err.println(ex.getClass());
                 continue;
             }
-            time = System.currentTimeMillis();
-            System.out.println("Finish creating document for annotation " + (time-start)/1000 + " seconds");
-            start = time;
 
             if (document == null) {
                 System.out.println("This URL cannot be rendered by Selenium!");
@@ -331,25 +368,23 @@ public class HTMLDocumentIngestionManager {
                 continue;
             }
 
-            if (document.getTitle().equals(WEB_DOCUMENT_CANNOT_BE_OPENED_ERROR)) {
-                System.out.println("This web document cannot be opened by browser!");
-                System.err.println("This web document cannot be opened by browser: " + baseUrl);
-                driver.close();
-                driver = createChromeDriver();
+            if (document.get(CoreAnnotations.TokensAnnotation.class).size() <= 1) {
+                System.out.println("This URL is probably not a web page!");
+                System.err.println("This URL is probably not a web page " + baseUrl);
                 continue;
             }
 
-            if (document.get(CoreAnnotations.TokensAnnotation.class).size() <= 1) {
-                System.out.println("This URL is probably not a web page!");
-                System.err.println("This URL is probably not a web page " + document.getURL());
-                continue;
-            }
+            time = System.currentTimeMillis();
+            System.out.println("Finish creating document for annotation " + (time-start)/1000 + " seconds");
+            start = time;
+
+            seenUrls.add(currentUrl);
 
             try {
                 AnnotatorFactory.getInstance().getAnnotationPipeline().annotate(document);
-            } catch(StaleElementReferenceException ex) {
+            } catch(Exception ex) {
                 System.out.println("There is an exception when annotating this document");
-                System.err.println("There is an exception when the document in this URL: " + baseUrl);
+                System.err.println("There is an exception when annotating the document in this URL: " + baseUrl);
                 continue;
             }
 
@@ -446,27 +481,21 @@ public class HTMLDocumentIngestionManager {
 
     }
 
-    private static ESAnnotatedHTMLDocument getHTMLDocumentForAnnotation(String url, WebDriver driver) throws StaleElementReferenceException{
-        driver.get(url);
-        String currentUrl;
+    public static Integer getHttpResponseCode(String baseUrl) {
         try {
-            currentUrl = driver.getCurrentUrl();
-        } catch (Exception ex) {
-            ESAnnotatedHTMLDocument doc = new ESAnnotatedHTMLDocument();
-            doc.setTitle(WEB_DOCUMENT_CANNOT_BE_OPENED_ERROR);
-            return doc;
+            URL url = new URL(baseUrl);
+            HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+            connection.setRequestMethod("GET");
+            connection.connect();
+            return connection.getResponseCode();
+        } catch (Exception e) {
+            System.err.println("This url cannot be opened: " + baseUrl);
         }
-        if (currentUrl.equalsIgnoreCase(CUR_URL)) {
-            return null; // avoid the case when the new URL is a file which does not navigate the driver to a new page
-        } else {
-            CUR_URL = currentUrl;
-        }
-        if (driver.getPageSource().length() > MAX_LENGTH_OF_PAGE_SOURCE) {
-            System.out.println("This document is too long!");
-            System.err.println("This document is too long " + url);
-            return null;
-        }
-        String pageTitle = driver.getTitle();
+        return null;
+    }
+
+    private static ESAnnotatedHTMLDocument getHTMLDocumentForAnnotation(WebDriver driver) throws StaleElementReferenceException{
+
         List<CoreLabel> allTokens = new ArrayList<>();
         RemoteWebElement e;
         try{
@@ -481,8 +510,8 @@ public class HTMLDocumentIngestionManager {
 //        travelDOMTreeWithSelenium2((RemoteWebElement)driver.findElement(By.xpath("/html/body")),null,allTokens, driver);
 //        ESAnnotatedHTMLDocument document = new ESAnnotatedHTMLDocument();
 //        document.loadFromTokens(allTokens);
-        document.setURL(url);
-        document.setTitle(pageTitle);
+        document.setURL(driver.getCurrentUrl());
+        document.setTitle(driver.getTitle());
         document.setHeight(e.getSize().height);
         document.setWidth(e.getSize().width);
         return document;

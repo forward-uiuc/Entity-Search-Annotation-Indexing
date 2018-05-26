@@ -10,6 +10,8 @@ import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -61,10 +63,15 @@ public class TestSelenium {
         WebDriver driver = new ChromeDriver(options);
 
         String baseUrl = "http://www.forwarddatalab.org/kevinchang";
+        baseUrl = "https://ece.illinois.edu/directory/profile/carney%3D";
+        baseUrl = "http://ece.illinois.edu";
+        baseUrl = "http://www.ece.illinois.edu/academics/courses/profile/ECE487&secM";
+
 //        baseUrl = "https://charm.cs.illinois.edu/";
 //        baseUrl = "http://codingspectator.cs.illinois.edu/updates/helios/";
 //        baseUrl = "http://nlp.cs.illinois.edu/HockenmaierGroup/8k-pictures.html";
-        baseUrl = "http://hockenmaier.cs.illinois.edu/DenotationGraph/graph/index10.html";
+//        baseUrl = "http://hockenmaier.cs.illinois.edu/DenotationGraph/graph/index10.html";
+//        baseUrl = "http://hockenmaier.cs.illinois.edu/DenotationGraph/graph/index100.html";
 //        WebDriverWait wait = new WebDriverWait(driver, 10);
 //        wait.until(new ExpectedCondition<Boolean>() {
 //            @Override
@@ -74,7 +81,8 @@ public class TestSelenium {
 //        });
         // launch browser and direct it to the Base URL
         driver.get(baseUrl);
-        System.out.println(driver.getPageSource().length());
+        System.out.println(driver.getCurrentUrl());
+        System.out.println(driver.getPageSource());
         System.exit(0);
 
         // get the title and print it
