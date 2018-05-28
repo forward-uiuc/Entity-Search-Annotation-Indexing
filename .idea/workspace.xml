@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbbbc773-7714-4942-be21-383885d0c5dc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serialized/kevin.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestReadObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestReadObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_urls copy.csv" beforeDir="false" afterPath="$PROJECT_DIR$/test_urls copy.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_urls.csv" beforeDir="false" afterPath="$PROJECT_DIR$/test_urls.csv" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,8 +32,8 @@
       <file leaf-file-name="HTMLDocumentIngestionManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="320" column="25" lean-forward="true" selection-start-line="320" selection-start-column="25" selection-end-line="320" selection-end-column="25" />
+            <state relative-caret-position="173">
+              <caret line="331" column="31" lean-forward="true" selection-start-line="331" selection-start-column="31" selection-end-line="331" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -461,12 +455,12 @@
       <workItem from="1527016798854" duration="34390000" />
       <workItem from="1527199211366" duration="2122000" />
       <workItem from="1527213726846" duration="1082000" />
-      <workItem from="1527262498742" duration="7419000" />
+      <workItem from="1527262498742" duration="8904000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="273028000" />
+    <option name="totallyTimeSpent" value="274513000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="6" y="23" width="1421" height="839" extended-state="0" />
@@ -933,8 +927,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="320" column="25" lean-forward="true" selection-start-line="320" selection-start-column="25" selection-end-line="320" selection-end-column="25" />
+        <state relative-caret-position="173">
+          <caret line="331" column="31" lean-forward="true" selection-start-line="331" selection-start-column="31" selection-end-line="331" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

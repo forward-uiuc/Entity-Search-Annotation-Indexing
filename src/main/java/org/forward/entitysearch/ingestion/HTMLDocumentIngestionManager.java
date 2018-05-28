@@ -319,12 +319,20 @@ public class HTMLDocumentIngestionManager {
 
             Integer responseCode = getHttpResponseCode(baseUrl);
             if (responseCode == null || responseCode >= 400) {
-                System.out.println("Bad Request!");
-                System.err.println("Bad Request: " + baseUrl);
+                System.out.println("Bad Request with code: " + responseCode);
+                System.err.println("Bad Request " + "with code " + responseCode + ": " + baseUrl);
                 continue;
             }
 
-            driver.get(baseUrl);
+            try {
+                driver.get(baseUrl);
+            } catch (Exception e) {
+                System.out.println("Web driver cannot open the page!");
+                System.err.println("Web driver cannot open the page: " + baseUrl);
+                driver.close();
+                driver = createChromeDriver();
+                continue;
+            }
             String currentUrl; // final url after redirects
             try {
                 currentUrl = driver.getCurrentUrl();
