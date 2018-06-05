@@ -9,6 +9,11 @@ import java.util.ArrayList;
 public class CreateImportFileForElasticSearch {
     public static void main (String[] args) throws IOException {
 
+        /*
+         * Run this command after exporting:
+         * curl -XPOST localhost:9200/test_annotation/_bulk -H ‘Content-Type: application/json’ --data-binary @test.json
+         */
+
         ArrayList<String> fields = new ArrayList<>();
 
         fields.add("_entity_NamedEntityTag");
