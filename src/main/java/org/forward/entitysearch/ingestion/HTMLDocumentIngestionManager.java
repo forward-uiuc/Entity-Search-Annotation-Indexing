@@ -47,7 +47,7 @@ public class HTMLDocumentIngestionManager {
         LIST_OF_TAGS_CREATING_NEW_LINES.add("h6");
     }
 
-    private static WebDriver createChromeDriver() {
+    public static WebDriver createChromeDriver() {
         System.setProperty("webdriver.chrome.driver",AnnotationProperties.getInstance().getProperty("selenium.chromedriver"));
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless"); // add this if wanting Chrome to be headless.
