@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbbbc773-7714-4942-be21-383885d0c5dc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateScreenshots.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/FindCommonPatternsInDocuments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/WalkThroughSerializedDocuments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntityAnnotation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EntityAnnotation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateScreenshots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateScreenshots.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,20 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="annotation_config.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/annotation_config.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="HTMLDocumentIngestionManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="334" column="13" lean-forward="true" selection-start-line="326" selection-start-column="12" selection-end-line="334" selection-end-column="13" />
+            <state relative-caret-position="3105">
+              <caret line="228" column="32" selection-start-line="228" selection-start-column="32" selection-end-line="228" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,82 +35,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateImportFileForElasticSearch.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateImportFileForElasticSearch.java">
+      <file leaf-file-name="regex_list.rules" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mapping_files/regex_list.rules">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateScreenshots.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CreateScreenshots.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateScreenshots.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="53" column="50" lean-forward="true" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
+            <state relative-caret-position="285">
+              <caret line="30" column="117" selection-start-line="30" selection-start-column="117" selection-end-line="30" selection-end-column="117" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="FindCommonPatternsInDocuments.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/FindCommonPatternsInDocuments.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomizableCoreAnnotations.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/CustomizableCoreAnnotations.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ESAnnotatedHTMLDocument.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/ESAnnotatedHTMLDocument.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
+            <state relative-caret-position="339">
+              <caret line="106" column="31" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2226#2227#0" expanded="true" />
-                <element signature="e#2260#2261#0" expanded="true" />
+                <element signature="e#4606#4607#0" expanded="true" />
+                <element signature="e#4651#4652#0" expanded="true" />
+                <element signature="e#4617#4646#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PTBTokenizer.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar!/edu/stanford/nlp/process/PTBTokenizer.java">
+      <file leaf-file-name="TestSelenium.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4710">
-              <caret line="329" column="2" selection-start-line="329" selection-start-column="2" selection-end-line="329" selection-end-column="2" />
+            <state relative-caret-position="825">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TokensRegexNERAnnotator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/TokensRegexNERAnnotator.java">
+      <file leaf-file-name="TestReadObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestReadObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2085">
-              <caret line="154" column="2" selection-start-line="154" selection-start-column="2" selection-end-line="154" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WordsToSentencesAnnotator.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar!/edu/stanford/nlp/pipeline/WordsToSentencesAnnotator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3180">
-              <caret line="228" selection-start-line="228" selection-end-line="228" />
+            <state relative-caret-position="240">
+              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -179,8 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/org/forward/entitysearch/ner/annotation/extraction/DBPediaExtractor.java" />
-        <option value="$PROJECT_DIR$/src/org/forward/entitysearch/ner/annotation/extraction/EntityExtractor.java" />
         <option value="$PROJECT_DIR$/src/org/forward/entitysearch/ingestion/IngestionManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ner/annotation/treegazetteer/GazetteerNode.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ner/annotation/extraction/PhoneEmailExtractor.java" />
@@ -229,7 +190,9 @@
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateImportFileForElasticSearch.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/WalkThroughSerializedDocuments.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateScreenshots.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/FindCommonPatternsInDocuments.java" />
       </list>
     </option>
   </component>
@@ -250,7 +213,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="6" />
+    <option name="x" value="19" />
     <option name="y" value="23" />
     <option name="width" value="1421" />
     <option name="height" value="839" />
@@ -260,42 +223,48 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Entity-Search-Annotation-Indexing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Entity-Search-Annotation-Indexing" type="462c0819:PsiDirectoryNode" />
+              <item name="EntityAnnotation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EntityAnnotation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Entity-Search-Annotation-Indexing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Entity-Search-Annotation-Indexing" type="462c0819:PsiDirectoryNode" />
+              <item name="EntityAnnotation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EntityAnnotation" type="462c0819:PsiDirectoryNode" />
+              <item name="mapping_files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EntityAnnotation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EntityAnnotation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Entity-Search-Annotation-Indexing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Entity-Search-Annotation-Indexing" type="462c0819:PsiDirectoryNode" />
+              <item name="EntityAnnotation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EntityAnnotation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Entity-Search-Annotation-Indexing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Entity-Search-Annotation-Indexing" type="462c0819:PsiDirectoryNode" />
+              <item name="EntityAnnotation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EntityAnnotation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Entity-Search-Annotation-Indexing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Entity-Search-Annotation-Indexing" type="462c0819:PsiDirectoryNode" />
+              <item name="EntityAnnotation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EntityAnnotation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="nlp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Entity-Search-Annotation-Indexing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Entity-Search-Annotation-Indexing" type="462c0819:PsiDirectoryNode" />
+              <item name="EntityAnnotation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EntityAnnotation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -303,8 +272,8 @@
               <item name="ling" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Entity-Search-Annotation-Indexing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Entity-Search-Annotation-Indexing" type="462c0819:PsiDirectoryNode" />
+              <item name="EntityAnnotation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EntityAnnotation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -312,16 +281,16 @@
               <item name="pipeline" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Entity-Search-Annotation-Indexing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Entity-Search-Annotation-Indexing" type="462c0819:PsiDirectoryNode" />
+              <item name="EntityAnnotation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EntityAnnotation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="entitysearch" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Entity-Search-Annotation-Indexing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Entity-Search-Annotation-Indexing" type="462c0819:PsiDirectoryNode" />
+              <item name="EntityAnnotation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EntityAnnotation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -329,13 +298,22 @@
               <item name="experiment" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Entity-Search-Annotation-Indexing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Entity-Search-Annotation-Indexing" type="462c0819:PsiDirectoryNode" />
+              <item name="EntityAnnotation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EntityAnnotation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="entitysearch" type="462c0819:PsiDirectoryNode" />
               <item name="ingestion" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EntityAnnotation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EntityAnnotation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="entitysearch" type="462c0819:PsiDirectoryNode" />
+              <item name="annotation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -343,7 +321,6 @@
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -377,7 +354,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CreateScreenshots">
+  <component name="RunManager" selected="Application.FindCommonPatternsInDocuments">
     <configuration name="CreateImportFileForElasticSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.forward.entitysearch.experiment.CreateImportFileForElasticSearch" />
       <module name="EntityAnnotation" />
@@ -400,6 +377,17 @@
         </pattern>
       </extension>
     </configuration>
+    <configuration name="FindCommonPatternsInDocuments" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.forward.entitysearch.experiment.FindCommonPatternsInDocuments" />
+      <module name="EntityAnnotation" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;#person data&quot; &quot;serialized/4.ser&quot; &quot;serialized/00087.ser&quot; " />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.forward.entitysearch.experiment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="TestReadObject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.forward.entitysearch.experiment.TestReadObject" />
       <module name="EntityAnnotation" />
@@ -410,9 +398,14 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="TestSelenium (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.forward.entitysearch.experiment.TestSelenium" />
+    <configuration name="TestStanfordNLPAnnotator" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.forward.entitysearch.experiment.StanfordNLPAnnotator" />
       <module name="EntityAnnotation" />
+    </configuration>
+    <configuration name="WalkThroughSerializedDocuments" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.forward.entitysearch.experiment.WalkThroughSerializedDocuments" />
+      <module name="EntityAnnotation" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;serialized&quot;" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.forward.entitysearch.experiment.*" />
@@ -420,34 +413,21 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="TestSelenium" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="org.forward.entitysearch.ingestion.HTMLDocumentIngestionManager" />
-      <module name="EntityAnnotation" />
-      <option name="PROGRAM_PARAMETERS" value="-i test_urls.csv -o serialized/ -v false -s 10" />
-      <option name="VM_PARAMETERS" value="-Xmx4096m" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-    </configuration>
-    <configuration name="TestStanfordNLPAnnotator" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="org.forward.entitysearch.experiment.StanfordNLPAnnotator" />
-      <module name="EntityAnnotation" />
-    </configuration>
     <list>
       <item itemvalue="Application.TestStanfordNLPAnnotator" />
-      <item itemvalue="Application.TestSelenium" />
       <item itemvalue="Application.TestReadObject" />
-      <item itemvalue="Application.TestSelenium (1)" />
       <item itemvalue="Application.CreateImportFileForElasticSearch" />
       <item itemvalue="Application.CreateScreenshots" />
+      <item itemvalue="Application.FindCommonPatternsInDocuments" />
+      <item itemvalue="Application.WalkThroughSerializedDocuments" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FindCommonPatternsInDocuments" />
+        <item itemvalue="Application.WalkThroughSerializedDocuments" />
         <item itemvalue="Application.CreateScreenshots" />
         <item itemvalue="Application.CreateImportFileForElasticSearch" />
         <item itemvalue="Application.TestReadObject" />
-        <item itemvalue="Application.TestSelenium" />
-        <item itemvalue="Application.TestSelenium (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -475,68 +455,49 @@
       <workItem from="1527213726846" duration="1082000" />
       <workItem from="1527262498742" duration="32666000" />
       <workItem from="1528483504569" duration="875000" />
+      <workItem from="1529004925009" duration="2782000" />
+      <workItem from="1529250833565" duration="20209000" />
+      <workItem from="1529638837602" duration="5794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="302400000" />
+    <option name="totallyTimeSpent" value="334827000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="23" width="1421" height="839" extended-state="0" />
+    <frame x="19" y="23" width="1421" height="839" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32831737" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40218878" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3166784" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32941177" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3166784" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32934552" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" x="0" y="0" width="341" height="788" id="Documentation" order="10" side_tool="true" weight="0.3299298" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.26666668" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40261438" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29803923" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2814919" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" x="0" y="0" width="341" height="788" id="Documentation" order="10" side_tool="true" weight="0.3299298" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32934552" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.26666668" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -631,41 +592,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar!/edu/stanford/nlp/ling/tokensregex/EnvLookup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar!/edu/stanford/nlp/ling/CoreAnnotations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="92" column="27" selection-start-line="92" selection-start-column="22" selection-end-line="92" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/lang/System.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/util/HashSet.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/util/Collections.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar!/edu/stanford/nlp/util/logging/Redwood.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7305">
-          <caret line="510" selection-start-line="510" selection-end-line="510" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar!/edu/stanford/nlp/pipeline/Annotation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="92" column="12" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
-          <folding>
-            <element signature="e#2261#2262#0" expanded="true" />
-            <element signature="e#2323#2324#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/lang/ClassLoader.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/util/HashMap.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar!/edu/stanford/nlp/util/PropertiesUtils.java">
@@ -868,13 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/TextFileFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -891,8 +810,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/annotation_config.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="195">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -916,20 +835,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestReadObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/ESAnnotatedHTMLDocument.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
+        <state relative-caret-position="240">
+          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2226#2227#0" expanded="true" />
@@ -940,22 +849,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/CustomizableCoreAnnotations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+        <state relative-caret-position="2235">
+          <caret line="176" column="40" selection-start-line="176" selection-start-column="24" selection-end-line="176" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+        <state relative-caret-position="660">
+          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateImportFileForElasticSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+        <state relative-caret-position="105">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -964,18 +873,90 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="334" column="13" lean-forward="true" selection-start-line="326" selection-start-column="12" selection-end-line="334" selection-end-column="13" />
+        <state relative-caret-position="3105">
+          <caret line="228" column="32" selection-start-line="228" selection-start-column="32" selection-end-line="228" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mapping_files/regex_list.rules">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateScreenshots.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="53" column="50" lean-forward="true" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
+        <state relative-caret-position="285">
+          <caret line="30" column="117" selection-start-line="30" selection-start-column="117" selection-end-line="30" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/WalkThroughSerializedDocuments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestReadObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar!/edu/stanford/nlp/ling/tokensregex/BasicSequenceMatchResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="155" selection-start-line="155" selection-end-line="155" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar!/edu/stanford/nlp/ling/tokensregex/SequenceMatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="656" selection-start-line="656" selection-end-line="656" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar!/edu/stanford/nlp/ling/tokensregex/TokenSequencePattern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="187" column="79" lean-forward="true" selection-start-line="187" selection-start-column="79" selection-end-line="187" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar!/edu/stanford/nlp/ling/tokensregex/SequencePattern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="266" column="30" lean-forward="true" selection-start-line="266" selection-start-column="30" selection-end-line="266" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/FindCommonPatternsInDocuments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="106" column="31" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4606#4607#0" expanded="true" />
+            <element signature="e#4651#4652#0" expanded="true" />
+            <element signature="e#4617#4646#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

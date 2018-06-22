@@ -28,16 +28,7 @@ public class CreateScreenshots {
         File[] listOfFiles = folder.listFiles();
         for (File file : listOfFiles) {
             if (file.isFile()) {
-                ESAnnotatedHTMLDocument doc = null;
-                FileInputStream fin;
-                ObjectInputStream ois;
-                try {
-                    fin = new FileInputStream(file);
-                    ois = new ObjectInputStream(fin);
-                    doc = (ESAnnotatedHTMLDocument) ois.readObject();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                ESAnnotatedHTMLDocument doc = FindCommonPatternsInDocuments.getEsAnnotatedHTMLDocumentFromFile(file);
                 if (doc != null) {
                     String imageFileName = DigestUtils.md5Hex(doc.getURL());
                     try {

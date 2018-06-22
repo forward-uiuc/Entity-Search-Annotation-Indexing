@@ -32,8 +32,10 @@
 /Users/longpham/Workspace/EntityAnnotation/src/main/java/edu/stanford/nlp/pipeline/PipelineHelper.java
 /Users/longpham/Workspace/EntityAnnotation/src/main/java/edu/stanford/nlp/pipeline/StanfordCoreNLP.java
 /Users/longpham/Workspace/EntityAnnotation/src/main/java/edu/stanford/nlp/pipeline/CustomizableFieldRegexNERAnnotator.java
+/Users/longpham/Workspace/EntityAnnotation/src/main/java/org/forward/entitysearch/experiment/CreateScreenshots.java
 /Users/longpham/Workspace/EntityAnnotation/src/main/java/org/forward/entitysearch/ingestion/ESAnnotatedHTMLDocument.java
 /Users/longpham/Workspace/EntityAnnotation/src/main/java/org/forward/entitysearch/ingestion/Ingester.java
+/Users/longpham/Workspace/EntityAnnotation/src/main/java/org/forward/entitysearch/experiment/FindCommonPatternsInDocuments.java
 /Users/longpham/Workspace/EntityAnnotation/src/main/java/org/forward/entitysearch/Manager.java
 /Users/longpham/Workspace/EntityAnnotation/src/main/java/org/forward/entitysearch/ner/annotation/SupertypeRootReconciler.java
 /Users/longpham/Workspace/EntityAnnotation/src/main/java/org/forward/entitysearch/ner/annotation/extraction/GazetteerTableExtractor.java
@@ -45,5 +47,6 @@
 /Users/longpham/Workspace/EntityAnnotation/src/main/java/org/forward/entitysearch/ingestion/WholeDocumentIngestionManager.java
 /Users/longpham/Workspace/EntityAnnotation/src/main/java/org/forward/entitysearch/ner/annotation/extraction/StanfordGazetteerPatternBuilder.java
 /Users/longpham/Workspace/EntityAnnotation/src/main/java/org/forward/entitysearch/ner/annotation/treegazetteer/GazetteerTraverser.java
+/Users/longpham/Workspace/EntityAnnotation/src/main/java/org/forward/entitysearch/experiment/WalkThroughSerializedDocuments.java
 /Users/longpham/Workspace/EntityAnnotation/src/main/java/org/forward/entitysearch/experiment/StanfordNLPAnnotator.java
 /Users/longpham/Workspace/EntityAnnotation/src/main/java/org/forward/entitysearch/ingestion/TextFileFilter.java
