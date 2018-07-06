@@ -12,6 +12,7 @@ public class AnnotatorFactory {
         Properties props = new Properties();
         props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, regexner");
         StanfordCoreNLP providedPipeline = new StanfordCoreNLP(props);
+        fullPipeline = providedPipeline;
         List<Annotator> providedAnnotators = providedPipeline.annotators;
         // separate label between ner and regexner
         TokensRegexNERAnnotator regexNerAnnotator = (TokensRegexNERAnnotator)(providedAnnotators.get(5));
@@ -42,7 +43,10 @@ public class AnnotatorFactory {
         return pipeline;
     }
 
+    public AnnotationPipeline getFullAnnotationPipeline() { return fullPipeline; };
+
     private static AnnotatorFactory instance = null;
     private TokenizerAnnotator tokenizer;
     private AnnotationPipeline pipeline;
+    private AnnotationPipeline fullPipeline;
 }

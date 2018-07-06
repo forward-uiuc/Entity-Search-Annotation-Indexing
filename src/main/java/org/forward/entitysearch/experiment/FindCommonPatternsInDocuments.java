@@ -10,6 +10,7 @@ import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.ling.CustomizableCoreAnnotations;
 import edu.stanford.nlp.ling.tokensregex.*;
 import edu.stanford.nlp.patterns.Pattern;
+import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.util.CoreMap;
 import edu.stanford.nlp.util.StringUtils;
 import org.forward.entitysearch.ingestion.ESAnnotatedHTMLDocument;
@@ -150,6 +151,20 @@ public class FindCommonPatternsInDocuments {
             fin = new FileInputStream(file);
             ois = new ObjectInputStream(fin);
             doc = (ESAnnotatedHTMLDocument) ois.readObject();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return doc;
+    }
+
+    public static Annotation getAnnotationFromFile(File file) {
+        Annotation doc = null;
+        FileInputStream fin;
+        ObjectInputStream ois;
+        try {
+            fin = new FileInputStream(file);
+            ois = new ObjectInputStream(fin);
+            doc = (Annotation) ois.readObject();
         } catch (Exception e) {
             e.printStackTrace();
         }

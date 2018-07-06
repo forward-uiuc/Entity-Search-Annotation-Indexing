@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbbbc773-7714-4942-be21-383885d0c5dc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/FindCommonPatternsInDocuments.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/WalkThroughSerializedDocuments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateAnnotatedTitles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateScreenshots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateScreenshots.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/FindCommonPatternsInDocuments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/FindCommonPatternsInDocuments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/WalkThroughSerializedDocuments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/WalkThroughSerializedDocuments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ner/annotation/AnnotatorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ner/annotation/AnnotatorFactory.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,8 +27,8 @@
       <file leaf-file-name="HTMLDocumentIngestionManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3105">
-              <caret line="228" column="32" selection-start-line="228" selection-start-column="32" selection-end-line="228" selection-end-column="32" />
+            <state relative-caret-position="131">
+              <caret line="294" column="165" lean-forward="true" selection-start-line="294" selection-start-column="64" selection-end-line="294" selection-end-column="165" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,11 +36,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="regex_list.rules" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mapping_files/regex_list.rules">
+      <file leaf-file-name="PipelineHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/PipelineHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+            <state relative-caret-position="-20">
+              <caret line="75" column="65" selection-start-line="75" selection-start-column="65" selection-end-line="75" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnnotatorFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ner/annotation/AnnotatorFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-110">
+              <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,35 +69,67 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FindCommonPatternsInDocuments.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CreateAnnotatedTitles.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateAnnotatedTitles.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="52" column="44" lean-forward="true" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FindCommonPatternsInDocuments.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/FindCommonPatternsInDocuments.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="106" column="31" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
+            <state relative-caret-position="280">
+              <caret line="159" column="42" selection-start-line="159" selection-start-column="42" selection-end-line="159" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4606#4607#0" expanded="true" />
-                <element signature="e#4651#4652#0" expanded="true" />
-                <element signature="e#4617#4646#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestSelenium.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java">
+      <file leaf-file-name="CreateImportFileForElasticSearch.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateImportFileForElasticSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="418">
+              <caret line="63" column="21" lean-forward="true" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestReadObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestReadObject.java">
+      <file leaf-file-name="ESAnnotatedHTMLDocument.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/ESAnnotatedHTMLDocument.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+            <state relative-caret-position="-39">
+              <caret line="24" column="60" lean-forward="true" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2226#2227#0" expanded="true" />
+                <element signature="e#2260#2261#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasicPipelineExample.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/BasicPipelineExample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="11">
+              <caret line="61" column="36" lean-forward="true" selection-start-line="60" selection-start-column="8" selection-end-line="61" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WalkThroughSerializedDocuments.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/WalkThroughSerializedDocuments.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -142,7 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/org/forward/entitysearch/ingestion/IngestionManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ner/annotation/treegazetteer/GazetteerNode.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ner/annotation/extraction/PhoneEmailExtractor.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ner/annotation/extraction/HuaweiDictionaryExtractor.java" />
@@ -184,15 +231,16 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/PipelineHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/AnnotatorFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/ESAnnotatedHTMLDocument.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ner/annotation/AnnotatorFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestReadObject.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/TestSelenium.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateImportFileForElasticSearch.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/WalkThroughSerializedDocuments.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateScreenshots.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ner/annotation/AnnotatorFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/FindCommonPatternsInDocuments.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateAnnotatedTitles.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/WalkThroughSerializedDocuments.java" />
       </list>
     </option>
   </component>
@@ -214,7 +262,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="19" />
-    <option name="y" value="23" />
+    <option name="y" value="45" />
     <option name="width" value="1421" />
     <option name="height" value="839" />
   </component>
@@ -223,7 +271,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -319,8 +369,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -354,7 +402,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FindCommonPatternsInDocuments">
+  <component name="RunManager" selected="Application.WalkThroughSerializedDocuments">
+    <configuration name="CreateAnnotatedTitles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.forward.entitysearch.experiment.CreateAnnotatedTitles" />
+      <module name="EntityAnnotation" />
+      <option name="PROGRAM_PARAMETERS" value="serialized/ serializedTitles/" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.forward.entitysearch.experiment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="CreateImportFileForElasticSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.forward.entitysearch.experiment.CreateImportFileForElasticSearch" />
       <module name="EntityAnnotation" />
@@ -388,16 +447,6 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="TestReadObject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.forward.entitysearch.experiment.TestReadObject" />
-      <module name="EntityAnnotation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.forward.entitysearch.experiment.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
     <configuration name="TestStanfordNLPAnnotator" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.forward.entitysearch.experiment.StanfordNLPAnnotator" />
       <module name="EntityAnnotation" />
@@ -405,7 +454,7 @@
     <configuration name="WalkThroughSerializedDocuments" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.forward.entitysearch.experiment.WalkThroughSerializedDocuments" />
       <module name="EntityAnnotation" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;serialized&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;serializedTitles&quot;" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.forward.entitysearch.experiment.*" />
@@ -415,19 +464,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.TestStanfordNLPAnnotator" />
-      <item itemvalue="Application.TestReadObject" />
       <item itemvalue="Application.CreateImportFileForElasticSearch" />
       <item itemvalue="Application.CreateScreenshots" />
       <item itemvalue="Application.FindCommonPatternsInDocuments" />
       <item itemvalue="Application.WalkThroughSerializedDocuments" />
+      <item itemvalue="Application.CreateAnnotatedTitles" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FindCommonPatternsInDocuments" />
         <item itemvalue="Application.WalkThroughSerializedDocuments" />
+        <item itemvalue="Application.CreateAnnotatedTitles" />
+        <item itemvalue="Application.FindCommonPatternsInDocuments" />
         <item itemvalue="Application.CreateScreenshots" />
         <item itemvalue="Application.CreateImportFileForElasticSearch" />
-        <item itemvalue="Application.TestReadObject" />
       </list>
     </recent_temporary>
   </component>
@@ -458,14 +507,17 @@
       <workItem from="1529004925009" duration="2782000" />
       <workItem from="1529250833565" duration="20209000" />
       <workItem from="1529638837602" duration="5794000" />
+      <workItem from="1530410723493" duration="13000" />
+      <workItem from="1530413897879" duration="788000" />
+      <workItem from="1530814756705" duration="10174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="334827000" />
+    <option name="totallyTimeSpent" value="345802000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="19" y="23" width="1421" height="839" extended-state="0" />
+    <frame x="19" y="45" width="1421" height="839" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -592,7 +644,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/lang/ClassLoader.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/util/HashMap.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar!/edu/stanford/nlp/util/PropertiesUtils.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -640,13 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="31" column="23" selection-end-line="261" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/AnnotationPipeline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
         </state>
       </provider>
     </entry>
@@ -766,13 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/BasicPipelineExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-144">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar!/edu/stanford/nlp/process/PTBTokenizer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4710">
@@ -815,38 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ner/annotation/AnnotatorFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/PipelineHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="75" column="78" selection-start-line="75" selection-start-column="78" selection-end-line="75" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/ESAnnotatedHTMLDocument.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2226#2227#0" expanded="true" />
-            <element signature="e#2260#2261#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/ling/CustomizableCoreAnnotations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2235">
@@ -861,26 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateImportFileForElasticSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3105">
-          <caret line="228" column="32" selection-start-line="228" selection-start-column="32" selection-end-line="228" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mapping_files/regex_list.rules">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -892,20 +877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateScreenshots.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="30" column="117" selection-start-line="30" selection-start-column="117" selection-end-line="30" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/WalkThroughSerializedDocuments.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -947,15 +918,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/FindCommonPatternsInDocuments.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/AnnotationPipeline.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="106" column="31" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
+        <state relative-caret-position="555">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateImportFileForElasticSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="63" column="21" lean-forward="true" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4606#4607#0" expanded="true" />
-            <element signature="e#4651#4652#0" expanded="true" />
-            <element signature="e#4617#4646#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/ESAnnotatedHTMLDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-39">
+          <caret line="24" column="60" lean-forward="true" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2226#2227#0" expanded="true" />
+            <element signature="e#2260#2261#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateScreenshots.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="30" column="117" selection-start-line="30" selection-start-column="117" selection-end-line="30" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ner/annotation/AnnotatorFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-110">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/BasicPipelineExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11">
+          <caret line="61" column="36" lean-forward="true" selection-start-line="60" selection-start-column="8" selection-end-line="61" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/FindCommonPatternsInDocuments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="159" column="42" selection-start-line="159" selection-start-column="42" selection-end-line="159" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ingestion/HTMLDocumentIngestionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="294" column="165" lean-forward="true" selection-start-line="294" selection-start-column="64" selection-end-line="294" selection-end-column="165" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/stanford/nlp/pipeline/PipelineHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="75" column="65" selection-start-line="75" selection-start-column="65" selection-end-line="75" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateAnnotatedTitles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="52" column="44" lean-forward="true" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/WalkThroughSerializedDocuments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
