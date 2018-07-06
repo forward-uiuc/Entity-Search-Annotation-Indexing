@@ -42,9 +42,9 @@ public class CreateAnnotatedTitles {
                 ESAnnotatedHTMLDocument doc = FindCommonPatternsInDocuments.getEsAnnotatedHTMLDocumentFromFile(file);
                 if (doc != null) {
                     String titleFileName = DigestUtils.md5Hex(doc.getURL());
-                    System.out.println(doc.getTitle() + " " + titleFileName);
+                    // System.out.println(doc.getTitle() + " " + titleFileName);
                     try {
-                        String path = outFolder + titleFileName + ".ser";
+                        String path = outFolder + "/" + titleFileName + ".ser";
                         Annotation titleDoc = new Annotation(doc.getTitle());
                         annotator.annotate(titleDoc);
                         FileOutputStream fileOut =

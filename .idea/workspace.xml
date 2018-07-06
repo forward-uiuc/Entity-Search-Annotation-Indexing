@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbbbc773-7714-4942-be21-383885d0c5dc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/annotateTitles.sh" beforeDir="false" afterPath="$PROJECT_DIR$/annotateTitles.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateAnnotatedTitles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateAnnotatedTitles.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -68,8 +68,8 @@
       <file leaf-file-name="CreateAnnotatedTitles.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateAnnotatedTitles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+            <state relative-caret-position="261">
+              <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -235,8 +235,8 @@
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateScreenshots.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ner/annotation/AnnotatorFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/FindCommonPatternsInDocuments.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateAnnotatedTitles.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/WalkThroughSerializedDocuments.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateAnnotatedTitles.java" />
       </list>
     </option>
   </component>
@@ -505,12 +505,12 @@
       <workItem from="1529638837602" duration="5794000" />
       <workItem from="1530410723493" duration="13000" />
       <workItem from="1530413897879" duration="788000" />
-      <workItem from="1530814756705" duration="11838000" />
+      <workItem from="1530814756705" duration="12323000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347466000" />
+    <option name="totallyTimeSpent" value="347951000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="19" y="45" width="1421" height="839" extended-state="0" />
@@ -1009,8 +1009,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateAnnotatedTitles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+        <state relative-caret-position="261">
+          <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
         </state>
       </provider>
     </entry>
