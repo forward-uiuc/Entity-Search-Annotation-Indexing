@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbbbc773-7714-4942-be21-383885d0c5dc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateAnnotatedTitles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/FindCommonPatternsInDocuments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/FindCommonPatternsInDocuments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/WalkThroughSerializedDocuments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/WalkThroughSerializedDocuments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ner/annotation/AnnotatorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/ner/annotation/AnnotatorFactory.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -69,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateAnnotatedTitles.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CreateAnnotatedTitles.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateAnnotatedTitles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="52" column="44" lean-forward="true" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+            <state relative-caret-position="152">
+              <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -125,11 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WalkThroughSerializedDocuments.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WalkThroughSerializedDocuments.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/WalkThroughSerializedDocuments.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="205">
-              <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -509,12 +505,12 @@
       <workItem from="1529638837602" duration="5794000" />
       <workItem from="1530410723493" duration="13000" />
       <workItem from="1530413897879" duration="788000" />
-      <workItem from="1530814756705" duration="10174000" />
+      <workItem from="1530814756705" duration="11549000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="345802000" />
+    <option name="totallyTimeSpent" value="347177000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="19" y="45" width="1421" height="839" extended-state="0" />
@@ -530,11 +526,11 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29803923" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29803923" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2814919" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2814919" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1001,20 +997,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateAnnotatedTitles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="52" column="44" lean-forward="true" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/WalkThroughSerializedDocuments.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
-          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/CreateAnnotatedTitles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
         </state>
       </provider>
     </entry>

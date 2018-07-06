@@ -34,7 +34,7 @@ public class WalkThroughSerializedDocuments {
 //                        System.out.println(file);
 //                    }
 //                }
-                
+
                 Annotation doc = FindCommonPatternsInDocuments.getAnnotationFromFile(file);
                 if (doc != null) {
                     for (CoreLabel token : doc.get(CoreAnnotations.TokensAnnotation.class)) {
