@@ -1,5 +1,6 @@
 package org.forward.entitysearch.experiment;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.forward.entitysearch.ingestion.ESAnnotatedHTMLDocument;
 import org.json.simple.JSONObject;
 
@@ -52,6 +53,20 @@ public class CreateImportFileForElasticSearch {
         fields.add("_layout_Y_ProfessorTag");
         fields.add("_layout_Y_SponsorAgencyTag");
 
+        ArrayList<String> tFields = new ArrayList<>();
+
+        tFields.add("_title_NamedEntityTag");
+        tFields.add("_title_RegexNER");
+        tFields.add("_title_Type");
+        tFields.add("_title_ConferenceTag");
+        tFields.add("_title_ConferenceAcronymTag");
+        tFields.add("_title_RegexTag");
+        tFields.add("_title_CourseTag");
+        tFields.add("_title_JournalTag");
+        tFields.add("_title_TopicTag");
+        tFields.add("_title_ProfessorTag");
+        tFields.add("_title_SponsorAgencyTag");
+
         BufferedWriter outputJson = new BufferedWriter(new FileWriter(args[1]));
 
         File folder = new File(args[0]);
@@ -75,6 +90,15 @@ public class CreateImportFileForElasticSearch {
                     for (String field : fields) {
                         String fileName = field+"_DO_LOAD_SERIALIZED_FILE_" + file.getAbsolutePath();
                         obj.put(field,fileName);
+                    }
+                    String titleFileName = file.getParentFile().getParent() + "/serializedTitles/" + DigestUtils.md5Hex(doc.getURL()) + ".ser";
+                    File titleFile = new File(titleFileName);
+                    if (titleFile.exists()) {
+                        // System.out.println(titleFile.getAbsolutePath());
+                        for (String field : tFields) {
+                            String fileName = field+"_DO_LOAD_SERIALIZED_FILE_" +  titleFile.getAbsolutePath();
+                            obj.put(field,fileName);
+                        }
                     }
                     obj.put("text", "_DO_LOAD_SERIALIZED_FILE_" + file.getAbsolutePath());
                     outputJson.write("{\"index\": {\"_type\": \"document\"}}\n");
