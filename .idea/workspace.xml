@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbbbc773-7714-4942-be21-383885d0c5dc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/WalkThroughSerializedDocuments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/forward/entitysearch/experiment/WalkThroughSerializedDocuments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annotateTitles.sh" beforeDir="false" afterPath="$PROJECT_DIR$/annotateTitles.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -505,12 +505,12 @@
       <workItem from="1529638837602" duration="5794000" />
       <workItem from="1530410723493" duration="13000" />
       <workItem from="1530413897879" duration="788000" />
-      <workItem from="1530814756705" duration="11549000" />
+      <workItem from="1530814756705" duration="11838000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347177000" />
+    <option name="totallyTimeSpent" value="347466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="19" y="45" width="1421" height="839" extended-state="0" />
