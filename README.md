@@ -1,3 +1,5 @@
+Please see updated README here: https://github.com/forward-uiuc/Forward-Search-Installation-Guide. It contains sufficient guideline to install the entire system. The following README may contain more information from summer 2017 work. Some of them is not relevant with the current code. You may find some useful information, but to get started, please use the link above.
+
 # Named Entity Recognition Document Annotator
 
 This project provides a framework for performing NER on documents and generating files ready for upload to Elastic Search for entity aware search.
